@@ -36,6 +36,17 @@
 		9D28371625313C0300ABBE05 /* NavigationServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28371525313C0300ABBE05 /* NavigationServiceImp.swift */; };
 		9D28371925313C3600ABBE05 /* ViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28371825313C3600ABBE05 /* ViewModelBase.swift */; };
 		9D28371C25313C5300ABBE05 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28371B25313C5300ABBE05 /* WelcomeViewModel.swift */; };
+		9D28371F253203C200ABBE05 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28371E253203C200ABBE05 /* LoginViewController.swift */; };
+		9D283724253203FE00ABBE05 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D283723253203FE00ABBE05 /* RegisterViewController.swift */; };
+		9D2837292532043300ABBE05 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2837282532043300ABBE05 /* ProfileViewController.swift */; };
+		9D28372C2532044900ABBE05 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28372B2532044900ABBE05 /* RegisterViewModel.swift */; };
+		9D28372F2532045900ABBE05 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28372E2532045900ABBE05 /* LoginViewModel.swift */; };
+		9D2837322532046400ABBE05 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2837312532046400ABBE05 /* ProfileViewModel.swift */; };
+		9D283737253204A000ABBE05 /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D283736253204A000ABBE05 /* ProfileDataSource.swift */; };
+		9D28373C253205DC00ABBE05 /* MWTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28373B253205DC00ABBE05 /* MWTopView.swift */; };
+		9D28374025320E6100ABBE05 /* MWNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28373F25320E6100ABBE05 /* MWNextView.swift */; };
+		9D28374425320F6400ABBE05 /* MWBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28374325320F6400ABBE05 /* MWBackView.swift */; };
+		9D2837482532200C00ABBE05 /* MWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2837472532200C00ABBE05 /* MWTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +81,17 @@
 		9D28371525313C0300ABBE05 /* NavigationServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationServiceImp.swift; sourceTree = "<group>"; };
 		9D28371825313C3600ABBE05 /* ViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBase.swift; sourceTree = "<group>"; };
 		9D28371B25313C5300ABBE05 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		9D28371E253203C200ABBE05 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9D283723253203FE00ABBE05 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9D2837282532043300ABBE05 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9D28372B2532044900ABBE05 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		9D28372E2532045900ABBE05 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9D2837312532046400ABBE05 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		9D283736253204A000ABBE05 /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
+		9D28373B253205DC00ABBE05 /* MWTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWTopView.swift; sourceTree = "<group>"; };
+		9D28373F25320E6100ABBE05 /* MWNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWNextView.swift; sourceTree = "<group>"; };
+		9D28374325320F6400ABBE05 /* MWBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWBackView.swift; sourceTree = "<group>"; };
+		9D2837472532200C00ABBE05 /* MWTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +132,7 @@
 				9D2836A9252FEDF500ABBE05 /* SceneDelegate.swift */,
 				9D2836D02531135B00ABBE05 /* Core */,
 				9D2836C525310FBA00ABBE05 /* Views */,
+				9D28373A2532058500ABBE05 /* CustomViews */,
 				9D2836CB2531105500ABBE05 /* Utils */,
 			);
 			path = MyWorkout;
@@ -120,6 +143,9 @@
 			children = (
 				9D2836C625310FD700ABBE05 /* BaseViews */,
 				9D2836F2253137FE00ABBE05 /* WelcomeViewController */,
+				9D283722253203EA00ABBE05 /* RegisterViewController */,
+				9D283721253203D500ABBE05 /* LoginViewController */,
+				9D2837272532041B00ABBE05 /* ProfileViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				9D28371B25313C5300ABBE05 /* WelcomeViewModel.swift */,
+				9D28372B2532044900ABBE05 /* RegisterViewModel.swift */,
+				9D28372E2532045900ABBE05 /* LoginViewModel.swift */,
+				9D2837312532046400ABBE05 /* ProfileViewModel.swift */,
 			);
 			path = Implementions;
 			sourceTree = "<group>";
@@ -262,6 +291,58 @@
 				9D28370725313B3900ABBE05 /* UIView+Stacking.swift */,
 			);
 			path = UIViewHelpers;
+			sourceTree = "<group>";
+		};
+		9D283721253203D500ABBE05 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D28371E253203C200ABBE05 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		9D283722253203EA00ABBE05 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D283723253203FE00ABBE05 /* RegisterViewController.swift */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		9D2837272532041B00ABBE05 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D2837342532047700ABBE05 /* ProfileTableData */,
+				9D2837282532043300ABBE05 /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		9D2837342532047700ABBE05 /* ProfileTableData */ = {
+			isa = PBXGroup;
+			children = (
+				9D2837352532048900ABBE05 /* Cells */,
+				9D283736253204A000ABBE05 /* ProfileDataSource.swift */,
+			);
+			path = ProfileTableData;
+			sourceTree = "<group>";
+		};
+		9D2837352532048900ABBE05 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9D28373A2532058500ABBE05 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				9D28373B253205DC00ABBE05 /* MWTopView.swift */,
+				9D28373F25320E6100ABBE05 /* MWNextView.swift */,
+				9D28374325320F6400ABBE05 /* MWBackView.swift */,
+				9D2837472532200C00ABBE05 /* MWTextField.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +414,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D28371F253203C200ABBE05 /* LoginViewController.swift in Sources */,
+				9D28374025320E6100ABBE05 /* MWNextView.swift in Sources */,
 				9D2836F72531387300ABBE05 /* BaseViewController.swift in Sources */,
 				9D2836D22531136700ABBE05 /* Core.swift in Sources */,
 				9D2836DB2531336A00ABBE05 /* DiContainer.swift in Sources */,
@@ -344,12 +427,19 @@
 				9D2836FA2531388D00ABBE05 /* ViewModel.swift in Sources */,
 				9D28371625313C0300ABBE05 /* NavigationServiceImp.swift in Sources */,
 				9D28371C25313C5300ABBE05 /* WelcomeViewModel.swift in Sources */,
+				9D28373C253205DC00ABBE05 /* MWTopView.swift in Sources */,
+				9D28374425320F6400ABBE05 /* MWBackView.swift in Sources */,
+				9D283737253204A000ABBE05 /* ProfileDataSource.swift in Sources */,
+				9D2837292532043300ABBE05 /* ProfileViewController.swift in Sources */,
 				9D2836AA252FEDF500ABBE05 /* SceneDelegate.swift in Sources */,
 				9D2836CD2531107800ABBE05 /* CustomUI+Ext.swift in Sources */,
 				9D28371025313B3A00ABBE05 /* UIButton.swift in Sources */,
 				9D28371325313B3A00ABBE05 /* AspectFitImageView.swift in Sources */,
 				9D2836E7253133F300ABBE05 /* Collection.swift in Sources */,
+				9D2837322532046400ABBE05 /* ProfileViewModel.swift in Sources */,
+				9D28372C2532044900ABBE05 /* RegisterViewModel.swift in Sources */,
 				9D28371925313C3600ABBE05 /* ViewModelBase.swift in Sources */,
+				9D28372F2532045900ABBE05 /* LoginViewModel.swift in Sources */,
 				9D2836C825310FF100ABBE05 /* ContainerViewController.swift in Sources */,
 				9D28371125313B3A00ABBE05 /* UILabel.swift in Sources */,
 				9D28371225313B3A00ABBE05 /* AnchoredConstraints.swift in Sources */,
@@ -357,9 +447,11 @@
 				9D2836B2252FEDF500ABBE05 /* MyWorkout.xcdatamodeld in Sources */,
 				9D28370D25313B3900ABBE05 /* UIView+Layout.swift in Sources */,
 				9D28370E25313B3900ABBE05 /* UIView+Stacking.swift in Sources */,
+				9D2837482532200C00ABBE05 /* MWTextField.swift in Sources */,
 				9D2836DE2531338500ABBE05 /* Command.swift in Sources */,
 				9D283700253138F100ABBE05 /* Enums.swift in Sources */,
 				9D2836FD253138C900ABBE05 /* FormBaseViewController.swift in Sources */,
+				9D283724253203FE00ABBE05 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

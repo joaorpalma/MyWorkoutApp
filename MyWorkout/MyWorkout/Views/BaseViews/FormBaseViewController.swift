@@ -9,7 +9,6 @@ import UIKit
 
 class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewModel> {
     var formViewAlignment: FormAlignment = .center
-    var bottomButtonHeight: CGFloat = 0
 
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -17,6 +16,7 @@ class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewMod
         scrollView.contentSize = self.view.frame.size
         scrollView.keyboardDismissMode = .interactive
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
         return scrollView
     }()
 
@@ -35,7 +35,7 @@ class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewMod
 
         if formViewAlignment == .top {
             formContainerStackView.anchor(top: scrollView.topAnchor, leading: self.view.safeAreaLayoutGuide.leadingAnchor,
-                                          bottom: nil, trailing: self.view.safeAreaLayoutGuide.trailingAnchor)
+                                          bottom: self.view.safeAreaLayoutGuide.bottomAnchor, trailing: self.view.safeAreaLayoutGuide.trailingAnchor)
         } else {
             formContainerStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
             formContainerStackView.centerInSuperview()

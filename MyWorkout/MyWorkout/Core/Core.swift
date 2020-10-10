@@ -23,6 +23,9 @@ struct Core {
 
     private static func _registerViewControllers() {
         DiContainer.registerViewController(WelcomeViewModel.self, constructor: { WelcomeViewController() })
+        DiContainer.registerViewController(RegisterViewModel.self, constructor: { RegisterViewController() })
+        DiContainer.registerViewController(LoginViewModel.self, constructor: { LoginViewController() })
+        DiContainer.registerViewController(ProfileViewModel.self, constructor: { ProfileViewController() })
     }
 
     private static func _startApp() {
