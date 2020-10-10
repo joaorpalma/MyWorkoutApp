@@ -33,6 +33,9 @@
 		9D28371125313B3A00ABBE05 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370A25313B3900ABBE05 /* UILabel.swift */; };
 		9D28371225313B3A00ABBE05 /* AnchoredConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370B25313B3900ABBE05 /* AnchoredConstraints.swift */; };
 		9D28371325313B3A00ABBE05 /* AspectFitImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370C25313B3900ABBE05 /* AspectFitImageView.swift */; };
+		9D28371625313C0300ABBE05 /* NavigationServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28371525313C0300ABBE05 /* NavigationServiceImp.swift */; };
+		9D28371925313C3600ABBE05 /* ViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28371825313C3600ABBE05 /* ViewModelBase.swift */; };
+		9D28371C25313C5300ABBE05 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28371B25313C5300ABBE05 /* WelcomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		9D28370A25313B3900ABBE05 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		9D28370B25313B3900ABBE05 /* AnchoredConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchoredConstraints.swift; sourceTree = "<group>"; };
 		9D28370C25313B3900ABBE05 /* AspectFitImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectFitImageView.swift; sourceTree = "<group>"; };
+		9D28371525313C0300ABBE05 /* NavigationServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationServiceImp.swift; sourceTree = "<group>"; };
+		9D28371825313C3600ABBE05 /* ViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBase.swift; sourceTree = "<group>"; };
+		9D28371B25313C5300ABBE05 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +220,7 @@
 		9D2836EE2531349200ABBE05 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				9D28371525313C0300ABBE05 /* NavigationServiceImp.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				9D2836F92531388D00ABBE05 /* ViewModel.swift */,
+				9D28371825313C3600ABBE05 /* ViewModelBase.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 		9D2836F0253134A800ABBE05 /* Implementions */ = {
 			isa = PBXGroup;
 			children = (
+				9D28371B25313C5300ABBE05 /* WelcomeViewModel.swift */,
 			);
 			path = Implementions;
 			sourceTree = "<group>";
@@ -333,11 +342,14 @@
 				9D2836E1253133AE00ABBE05 /* TypeAlias.swift in Sources */,
 				9D28370F25313B3A00ABBE05 /* UIStackView.swift in Sources */,
 				9D2836FA2531388D00ABBE05 /* ViewModel.swift in Sources */,
+				9D28371625313C0300ABBE05 /* NavigationServiceImp.swift in Sources */,
+				9D28371C25313C5300ABBE05 /* WelcomeViewModel.swift in Sources */,
 				9D2836AA252FEDF500ABBE05 /* SceneDelegate.swift in Sources */,
 				9D2836CD2531107800ABBE05 /* CustomUI+Ext.swift in Sources */,
 				9D28371025313B3A00ABBE05 /* UIButton.swift in Sources */,
 				9D28371325313B3A00ABBE05 /* AspectFitImageView.swift in Sources */,
 				9D2836E7253133F300ABBE05 /* Collection.swift in Sources */,
+				9D28371925313C3600ABBE05 /* ViewModelBase.swift in Sources */,
 				9D2836C825310FF100ABBE05 /* ContainerViewController.swift in Sources */,
 				9D28371125313B3A00ABBE05 /* UILabel.swift in Sources */,
 				9D28371225313B3A00ABBE05 /* AnchoredConstraints.swift in Sources */,
