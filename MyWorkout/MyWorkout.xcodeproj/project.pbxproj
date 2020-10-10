@@ -15,6 +15,17 @@
 		9D2836C825310FF100ABBE05 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836C725310FF100ABBE05 /* ContainerViewController.swift */; };
 		9D2836CD2531107800ABBE05 /* CustomUI+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836CC2531107800ABBE05 /* CustomUI+Ext.swift */; };
 		9D2836D22531136700ABBE05 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836D12531136700ABBE05 /* Core.swift */; };
+		9D2836DB2531336A00ABBE05 /* DiContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836DA2531336A00ABBE05 /* DiContainer.swift */; };
+		9D2836DE2531338500ABBE05 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836DD2531338500ABBE05 /* Command.swift */; };
+		9D2836E1253133AE00ABBE05 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836E0253133AE00ABBE05 /* TypeAlias.swift */; };
+		9D2836E4253133D800ABBE05 /* Command{T}.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836E3253133D800ABBE05 /* Command{T}.swift */; };
+		9D2836E7253133F300ABBE05 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836E6253133F300ABBE05 /* Collection.swift */; };
+		9D2836F42531382100ABBE05 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836F32531382100ABBE05 /* WelcomeViewController.swift */; };
+		9D2836F72531387300ABBE05 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836F62531387300ABBE05 /* BaseViewController.swift */; };
+		9D2836FA2531388D00ABBE05 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836F92531388D00ABBE05 /* ViewModel.swift */; };
+		9D2836FD253138C900ABBE05 /* FormBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836FC253138C900ABBE05 /* FormBaseViewController.swift */; };
+		9D283700253138F100ABBE05 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836FF253138F100ABBE05 /* Enums.swift */; };
+		9D28370325313A6900ABBE05 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370225313A6900ABBE05 /* NavigationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +39,17 @@
 		9D2836C725310FF100ABBE05 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		9D2836CC2531107800ABBE05 /* CustomUI+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUI+Ext.swift"; sourceTree = "<group>"; };
 		9D2836D12531136700ABBE05 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		9D2836DA2531336A00ABBE05 /* DiContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiContainer.swift; sourceTree = "<group>"; };
+		9D2836DD2531338500ABBE05 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		9D2836E0253133AE00ABBE05 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		9D2836E3253133D800ABBE05 /* Command{T}.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Command{T}.swift"; sourceTree = "<group>"; };
+		9D2836E6253133F300ABBE05 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		9D2836F32531382100ABBE05 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		9D2836F62531387300ABBE05 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9D2836F92531388D00ABBE05 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9D2836FC253138C900ABBE05 /* FormBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormBaseViewController.swift; sourceTree = "<group>"; };
+		9D2836FF253138F100ABBE05 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		9D28370225313A6900ABBE05 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +84,10 @@
 			children = (
 				9D2836B8252FEDF800ABBE05 /* Info.plist */,
 				9D2836B3252FEDF800ABBE05 /* Assets.xcassets */,
-				9D2836A7252FEDF500ABBE05 /* AppDelegate.swift */,
-				9D2836A9252FEDF500ABBE05 /* SceneDelegate.swift */,
 				9D2836B5252FEDF800ABBE05 /* LaunchScreen.storyboard */,
 				9D2836B0252FEDF500ABBE05 /* MyWorkout.xcdatamodeld */,
+				9D2836A7252FEDF500ABBE05 /* AppDelegate.swift */,
+				9D2836A9252FEDF500ABBE05 /* SceneDelegate.swift */,
 				9D2836D02531135B00ABBE05 /* Core */,
 				9D2836C525310FBA00ABBE05 /* Views */,
 				9D2836CB2531105500ABBE05 /* Utils */,
@@ -77,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				9D2836C625310FD700ABBE05 /* BaseViews */,
+				9D2836F2253137FE00ABBE05 /* WelcomeViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				9D2836C725310FF100ABBE05 /* ContainerViewController.swift */,
+				9D2836F62531387300ABBE05 /* BaseViewController.swift */,
+				9D2836FC253138C900ABBE05 /* FormBaseViewController.swift */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -92,7 +117,10 @@
 		9D2836CB2531105500ABBE05 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9D28370525313ACB00ABBE05 /* UIViewHelpers */,
 				9D2836CC2531107800ABBE05 /* CustomUI+Ext.swift */,
+				9D2836E0253133AE00ABBE05 /* TypeAlias.swift */,
+				9D2836FF253138F100ABBE05 /* Enums.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -100,9 +128,110 @@
 		9D2836D02531135B00ABBE05 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9D2836D6253132C900ABBE05 /* Tools */,
+				9D2836D5253132C200ABBE05 /* Services */,
+				9D2836D4253132BA00ABBE05 /* ViewModels */,
 				9D2836D12531136700ABBE05 /* Core.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		9D2836D4253132BA00ABBE05 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9D2836EF253134A300ABBE05 /* Protocols */,
+				9D2836F0253134A800ABBE05 /* Implementions */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9D2836D5253132C200ABBE05 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9D2836ED2531348B00ABBE05 /* Protocols */,
+				9D2836EE2531349200ABBE05 /* Implementations */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9D2836D6253132C900ABBE05 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9D2836D92531332F00ABBE05 /* Extensions */,
+				9D2836D82531331E00ABBE05 /* Command */,
+				9D2836D7253132EB00ABBE05 /* DependencyInjection */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		9D2836D7253132EB00ABBE05 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				9D2836DA2531336A00ABBE05 /* DiContainer.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		9D2836D82531331E00ABBE05 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				9D2836DD2531338500ABBE05 /* Command.swift */,
+				9D2836E3253133D800ABBE05 /* Command{T}.swift */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		9D2836D92531332F00ABBE05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9D2836E6253133F300ABBE05 /* Collection.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9D2836ED2531348B00ABBE05 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D28370225313A6900ABBE05 /* NavigationService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9D2836EE2531349200ABBE05 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		9D2836EF253134A300ABBE05 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D2836F92531388D00ABBE05 /* ViewModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9D2836F0253134A800ABBE05 /* Implementions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Implementions;
+			sourceTree = "<group>";
+		};
+		9D2836F2253137FE00ABBE05 /* WelcomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D2836F32531382100ABBE05 /* WelcomeViewController.swift */,
+			);
+			path = WelcomeViewController;
+			sourceTree = "<group>";
+		};
+		9D28370525313ACB00ABBE05 /* UIViewHelpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIViewHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,12 +303,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D2836F72531387300ABBE05 /* BaseViewController.swift in Sources */,
 				9D2836D22531136700ABBE05 /* Core.swift in Sources */,
+				9D2836DB2531336A00ABBE05 /* DiContainer.swift in Sources */,
+				9D2836E4253133D800ABBE05 /* Command{T}.swift in Sources */,
+				9D28370325313A6900ABBE05 /* NavigationService.swift in Sources */,
 				9D2836A8252FEDF500ABBE05 /* AppDelegate.swift in Sources */,
+				9D2836E1253133AE00ABBE05 /* TypeAlias.swift in Sources */,
+				9D2836FA2531388D00ABBE05 /* ViewModel.swift in Sources */,
 				9D2836AA252FEDF500ABBE05 /* SceneDelegate.swift in Sources */,
 				9D2836CD2531107800ABBE05 /* CustomUI+Ext.swift in Sources */,
+				9D2836E7253133F300ABBE05 /* Collection.swift in Sources */,
 				9D2836C825310FF100ABBE05 /* ContainerViewController.swift in Sources */,
+				9D2836F42531382100ABBE05 /* WelcomeViewController.swift in Sources */,
 				9D2836B2252FEDF500ABBE05 /* MyWorkout.xcdatamodeld in Sources */,
+				9D2836DE2531338500ABBE05 /* Command.swift in Sources */,
+				9D283700253138F100ABBE05 /* Enums.swift in Sources */,
+				9D2836FD253138C900ABBE05 /* FormBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,14 +12,14 @@ class ContainerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     func changeViewController(_ viewController: UIViewController) {
         guard _checkIfCurrentViewControllerIsNotEqualsToNew(viewController) else { return }
 
         _removeCurrentViewController()
-        _addNewViewControllerToContainer_(viewController)
+        _addNewViewControllerToContainer(viewController)
     }
 
     private func _checkIfCurrentViewControllerIsNotEqualsToNew(_ viewController: UIViewController) -> Bool {
@@ -35,7 +35,7 @@ class ContainerViewController: UIViewController {
         }
     }
 
-    private func _addNewViewControllerToContainer_ (_ viewController: UIViewController) {
+    private func _addNewViewControllerToContainer (_ viewController: UIViewController) {
         viewController.view.frame = self.view.frame
         self.view.addSubview(viewController.view)
         self.addChild(viewController)

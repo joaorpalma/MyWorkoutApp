@@ -37,3 +37,15 @@ struct CustomUIAppearance {
         return textShadow
     }
 }
+
+extension UIColor {
+    struct Theme {
+        static var blue = UIColor().fromRGBA(red: 36, green: 187, blue: 200, alpha: 1.0)
+        static var purple = UIColor().fromRGBA(red: 94, green: 74, blue: 186, alpha: 1.0)
+        static var grey = UIColor().fromRGBA(red: 101, green: 114, blue: 114, alpha: 1.0)
+    }
+    
+    func fromRGBA(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
+        return UIColor(red: (red/255.0), green: (green/255.0), blue: (blue/255.0), alpha: alpha)
+    }
+}
