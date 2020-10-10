@@ -26,6 +26,13 @@
 		9D2836FD253138C900ABBE05 /* FormBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836FC253138C900ABBE05 /* FormBaseViewController.swift */; };
 		9D283700253138F100ABBE05 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836FF253138F100ABBE05 /* Enums.swift */; };
 		9D28370325313A6900ABBE05 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370225313A6900ABBE05 /* NavigationService.swift */; };
+		9D28370D25313B3900ABBE05 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370625313B3900ABBE05 /* UIView+Layout.swift */; };
+		9D28370E25313B3900ABBE05 /* UIView+Stacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370725313B3900ABBE05 /* UIView+Stacking.swift */; };
+		9D28370F25313B3A00ABBE05 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370825313B3900ABBE05 /* UIStackView.swift */; };
+		9D28371025313B3A00ABBE05 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370925313B3900ABBE05 /* UIButton.swift */; };
+		9D28371125313B3A00ABBE05 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370A25313B3900ABBE05 /* UILabel.swift */; };
+		9D28371225313B3A00ABBE05 /* AnchoredConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370B25313B3900ABBE05 /* AnchoredConstraints.swift */; };
+		9D28371325313B3A00ABBE05 /* AspectFitImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28370C25313B3900ABBE05 /* AspectFitImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		9D2836FC253138C900ABBE05 /* FormBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormBaseViewController.swift; sourceTree = "<group>"; };
 		9D2836FF253138F100ABBE05 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9D28370225313A6900ABBE05 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		9D28370625313B3900ABBE05 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		9D28370725313B3900ABBE05 /* UIView+Stacking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Stacking.swift"; sourceTree = "<group>"; };
+		9D28370825313B3900ABBE05 /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		9D28370925313B3900ABBE05 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		9D28370A25313B3900ABBE05 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		9D28370B25313B3900ABBE05 /* AnchoredConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchoredConstraints.swift; sourceTree = "<group>"; };
+		9D28370C25313B3900ABBE05 /* AspectFitImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectFitImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +244,13 @@
 		9D28370525313ACB00ABBE05 /* UIViewHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				9D28370B25313B3900ABBE05 /* AnchoredConstraints.swift */,
+				9D28370C25313B3900ABBE05 /* AspectFitImageView.swift */,
+				9D28370925313B3900ABBE05 /* UIButton.swift */,
+				9D28370A25313B3900ABBE05 /* UILabel.swift */,
+				9D28370825313B3900ABBE05 /* UIStackView.swift */,
+				9D28370625313B3900ABBE05 /* UIView+Layout.swift */,
+				9D28370725313B3900ABBE05 /* UIView+Stacking.swift */,
 			);
 			path = UIViewHelpers;
 			sourceTree = "<group>";
@@ -310,13 +331,20 @@
 				9D28370325313A6900ABBE05 /* NavigationService.swift in Sources */,
 				9D2836A8252FEDF500ABBE05 /* AppDelegate.swift in Sources */,
 				9D2836E1253133AE00ABBE05 /* TypeAlias.swift in Sources */,
+				9D28370F25313B3A00ABBE05 /* UIStackView.swift in Sources */,
 				9D2836FA2531388D00ABBE05 /* ViewModel.swift in Sources */,
 				9D2836AA252FEDF500ABBE05 /* SceneDelegate.swift in Sources */,
 				9D2836CD2531107800ABBE05 /* CustomUI+Ext.swift in Sources */,
+				9D28371025313B3A00ABBE05 /* UIButton.swift in Sources */,
+				9D28371325313B3A00ABBE05 /* AspectFitImageView.swift in Sources */,
 				9D2836E7253133F300ABBE05 /* Collection.swift in Sources */,
 				9D2836C825310FF100ABBE05 /* ContainerViewController.swift in Sources */,
+				9D28371125313B3A00ABBE05 /* UILabel.swift in Sources */,
+				9D28371225313B3A00ABBE05 /* AnchoredConstraints.swift in Sources */,
 				9D2836F42531382100ABBE05 /* WelcomeViewController.swift in Sources */,
 				9D2836B2252FEDF500ABBE05 /* MyWorkout.xcdatamodeld in Sources */,
+				9D28370D25313B3900ABBE05 /* UIView+Layout.swift in Sources */,
+				9D28370E25313B3900ABBE05 /* UIView+Stacking.swift in Sources */,
 				9D2836DE2531338500ABBE05 /* Command.swift in Sources */,
 				9D283700253138F100ABBE05 /* Enums.swift in Sources */,
 				9D2836FD253138C900ABBE05 /* FormBaseViewController.swift in Sources */,
