@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9D2836A8252FEDF500ABBE05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836A7252FEDF500ABBE05 /* AppDelegate.swift */; };
 		9D2836AA252FEDF500ABBE05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836A9252FEDF500ABBE05 /* SceneDelegate.swift */; };
-		9D2836B2252FEDF500ABBE05 /* MyWorkout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836B0252FEDF500ABBE05 /* MyWorkout.xcdatamodeld */; };
 		9D2836B4252FEDF800ABBE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2836B3252FEDF800ABBE05 /* Assets.xcassets */; };
 		9D2836B7252FEDF800ABBE05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2836B5252FEDF800ABBE05 /* LaunchScreen.storyboard */; };
 		9D2836C825310FF100ABBE05 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836C725310FF100ABBE05 /* ContainerViewController.swift */; };
@@ -50,13 +49,16 @@
 		9D28374F253272E600ABBE05 /* MWSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28374E253272E600ABBE05 /* MWSelectView.swift */; };
 		9D2837572533675100ABBE05 /* MWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2837562533675100ABBE05 /* MWButton.swift */; };
 		9D28375C25336B6800ABBE05 /* ProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28375B25336B6800ABBE05 /* ProfileDetail.swift */; };
+		9D8382FB2533AC94003A20B3 /* DialogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8382FA2533AC94003A20B3 /* DialogService.swift */; };
+		9D8382FE2533ACA0003A20B3 /* DialogServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8382FD2533ACA0003A20B3 /* DialogServiceImp.swift */; };
+		9D8383032533AD62003A20B3 /* InfoDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383022533AD62003A20B3 /* InfoDialogView.swift */; };
+		9D8383072533AD95003A20B3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383062533AD95003A20B3 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9D2836A4252FEDF500ABBE05 /* MyWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2836A7252FEDF500ABBE05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D2836A9252FEDF500ABBE05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9D2836B1252FEDF500ABBE05 /* MyWorkout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyWorkout.xcdatamodel; sourceTree = "<group>"; };
 		9D2836B3252FEDF800ABBE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D2836B6252FEDF800ABBE05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D2836B8252FEDF800ABBE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +100,10 @@
 		9D28374E253272E600ABBE05 /* MWSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWSelectView.swift; sourceTree = "<group>"; };
 		9D2837562533675100ABBE05 /* MWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWButton.swift; sourceTree = "<group>"; };
 		9D28375B25336B6800ABBE05 /* ProfileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetail.swift; sourceTree = "<group>"; };
+		9D8382FA2533AC94003A20B3 /* DialogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogService.swift; sourceTree = "<group>"; };
+		9D8382FD2533ACA0003A20B3 /* DialogServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogServiceImp.swift; sourceTree = "<group>"; };
+		9D8383022533AD62003A20B3 /* InfoDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDialogView.swift; sourceTree = "<group>"; };
+		9D8383062533AD95003A20B3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +139,6 @@
 				9D2836B8252FEDF800ABBE05 /* Info.plist */,
 				9D2836B3252FEDF800ABBE05 /* Assets.xcassets */,
 				9D2836B5252FEDF800ABBE05 /* LaunchScreen.storyboard */,
-				9D2836B0252FEDF500ABBE05 /* MyWorkout.xcdatamodeld */,
 				9D2836A7252FEDF500ABBE05 /* AppDelegate.swift */,
 				9D2836A9252FEDF500ABBE05 /* SceneDelegate.swift */,
 				9D2836D02531135B00ABBE05 /* Core */,
@@ -173,6 +178,7 @@
 				9D2836CC2531107800ABBE05 /* CustomUI+Ext.swift */,
 				9D2836E0253133AE00ABBE05 /* TypeAlias.swift */,
 				9D2836FF253138F100ABBE05 /* Enums.swift */,
+				9D8383062533AD95003A20B3 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 		9D2836ED2531348B00ABBE05 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9D8382FA2533AC94003A20B3 /* DialogService.swift */,
 				9D28370225313A6900ABBE05 /* NavigationService.swift */,
 			);
 			path = Protocols;
@@ -253,6 +260,7 @@
 		9D2836EE2531349200ABBE05 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				9D8382FD2533ACA0003A20B3 /* DialogServiceImp.swift */,
 				9D28371525313C0300ABBE05 /* NavigationServiceImp.swift */,
 			);
 			path = Implementations;
@@ -336,6 +344,7 @@
 		9D28373A2532058500ABBE05 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				9D8383012533AD4F003A20B3 /* Dialog */,
 				9D28373B253205DC00ABBE05 /* MWTopView.swift */,
 				9D28373F25320E6100ABBE05 /* MWNextView.swift */,
 				9D28374325320F6400ABBE05 /* MWBackView.swift */,
@@ -360,6 +369,14 @@
 				9D28375B25336B6800ABBE05 /* ProfileDetail.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		9D8383012533AD4F003A20B3 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				9D8383022533AD62003A20B3 /* InfoDialogView.swift */,
+			);
+			path = Dialog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +458,7 @@
 				9D28370325313A6900ABBE05 /* NavigationService.swift in Sources */,
 				9D2836A8252FEDF500ABBE05 /* AppDelegate.swift in Sources */,
 				9D2836E1253133AE00ABBE05 /* TypeAlias.swift in Sources */,
+				9D8383032533AD62003A20B3 /* InfoDialogView.swift in Sources */,
 				9D28370F25313B3A00ABBE05 /* UIStackView.swift in Sources */,
 				9D2836FA2531388D00ABBE05 /* ViewModel.swift in Sources */,
 				9D28371625313C0300ABBE05 /* NavigationServiceImp.swift in Sources */,
@@ -450,20 +468,22 @@
 				9D283737253204A000ABBE05 /* ProfileDataSource.swift in Sources */,
 				9D2837572533675100ABBE05 /* MWButton.swift in Sources */,
 				9D2837292532043300ABBE05 /* ProfileViewController.swift in Sources */,
+				9D8383072533AD95003A20B3 /* Utils.swift in Sources */,
 				9D2836AA252FEDF500ABBE05 /* SceneDelegate.swift in Sources */,
 				9D2836CD2531107800ABBE05 /* CustomUI+Ext.swift in Sources */,
 				9D28371025313B3A00ABBE05 /* UIButton.swift in Sources */,
 				9D28371325313B3A00ABBE05 /* AspectFitImageView.swift in Sources */,
 				9D2836E7253133F300ABBE05 /* Collection.swift in Sources */,
+				9D8382FE2533ACA0003A20B3 /* DialogServiceImp.swift in Sources */,
 				9D2837322532046400ABBE05 /* ProfileViewModel.swift in Sources */,
 				9D28372C2532044900ABBE05 /* RegisterViewModel.swift in Sources */,
 				9D28371925313C3600ABBE05 /* ViewModelBase.swift in Sources */,
 				9D28372F2532045900ABBE05 /* LoginViewModel.swift in Sources */,
 				9D2836C825310FF100ABBE05 /* ContainerViewController.swift in Sources */,
+				9D8382FB2533AC94003A20B3 /* DialogService.swift in Sources */,
 				9D28371125313B3A00ABBE05 /* UILabel.swift in Sources */,
 				9D28371225313B3A00ABBE05 /* AnchoredConstraints.swift in Sources */,
 				9D2836F42531382100ABBE05 /* WelcomeViewController.swift in Sources */,
-				9D2836B2252FEDF500ABBE05 /* MyWorkout.xcdatamodeld in Sources */,
 				9D28370D25313B3900ABBE05 /* UIView+Layout.swift in Sources */,
 				9D28370E25313B3900ABBE05 /* UIView+Stacking.swift in Sources */,
 				9D2837482532200C00ABBE05 /* MWTextField.swift in Sources */,
@@ -669,19 +689,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9D2836B0252FEDF500ABBE05 /* MyWorkout.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				9D2836B1252FEDF500ABBE05 /* MyWorkout.xcdatamodel */,
-			);
-			currentVersion = 9D2836B1252FEDF500ABBE05 /* MyWorkout.xcdatamodel */;
-			path = MyWorkout.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 9D28369C252FEDF500ABBE05 /* Project object */;
 }

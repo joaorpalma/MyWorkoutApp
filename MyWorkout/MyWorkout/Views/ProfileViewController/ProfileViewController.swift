@@ -38,7 +38,6 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
     private func _configureProfile() {
         self.view.addSubview(_profileBackgroundView)
         _profileBackgroundView.anchor(top: self.view.topAnchor, leading: self.view.leadingAnchor, bottom: nil, trailing: self.view.trailingAnchor)
-        _setProfileSize()
         
         _profileBackgroundView.addSubview(_gradientView)
         _gradientView.fillSuperview()
@@ -54,6 +53,7 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
         profileView.centerXTo(_profileBackgroundView.centerXAnchor)
         profileView.centerYTo(_profileBackgroundView.centerYAnchor)
         
+        _setProfileSize()
     }
     
     private func _setProfileSize() {
