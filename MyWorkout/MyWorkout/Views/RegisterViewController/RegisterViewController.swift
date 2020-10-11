@@ -47,7 +47,7 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel> {
             _topView,
             formView,
             spacing: 110
-        ).padTop(70).padLeft(40).padRight(40).padBottom(50)
+        ).padTop(85).padLeft(40).padRight(40).padBottom(25)
         
         self.formContainerStackView.addArrangedSubview(view)
     
@@ -98,9 +98,9 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel> {
     }
     
     private func _createFormLineGradient() {
-        _emailTextField.createGradient()
-        _passwordTextField.createGradient()
-        _underlineView.createLineGradient()
+        _emailTextField.createTFLineGradient()
+        _passwordTextField.createTFLineGradient()
+        _underlineView.createGradient()
         self.view.setNeedsDisplay()
         self.view.setNeedsLayout()
     }

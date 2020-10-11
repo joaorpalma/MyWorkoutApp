@@ -36,3 +36,12 @@ open class AspectFillImageView: UIImageView {
         clipsToBounds = true
     }
 }
+
+extension UIImageView {
+    convenience public init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill) {
+        self.init(image: image)
+        self.contentMode = contentMode
+        self.clipsToBounds = true
+    }
+}
+

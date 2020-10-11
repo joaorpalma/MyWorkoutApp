@@ -34,7 +34,7 @@ class LoginViewController: FormBaseViewController<LoginViewModel> {
             _topView,
             formView,
             spacing: 110
-        ).padTop(70).padLeft(40).padRight(40).padBottom(50)
+        ).padTop(70).padLeft(40).padRight(40).padBottom(60)
         
         self.formContainerStackView.addArrangedSubview(view)
     
@@ -75,8 +75,8 @@ class LoginViewController: FormBaseViewController<LoginViewModel> {
     }
     
     private func _createFormLineGradient() {
-        _emailTextField.createGradient()
-        _passwordTextField.createGradient()
+        _emailTextField.createTFLineGradient()
+        _passwordTextField.createTFLineGradient()
         self.view.setNeedsDisplay()
         self.view.setNeedsLayout()
     }

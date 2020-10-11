@@ -51,13 +51,14 @@ extension UIColor {
 }
 
 extension UIView {
-    func createLineGradient() {
+    func createGradient(height: CGFloat = 1.4,
+        startPosition: CGPoint = CGPoint(x: 0.0, y: 0.5), endPosition: CGPoint = CGPoint(x: 1.0, y: 0.5)) {
         let gradient = CAGradientLayer()
-        gradient.frame = .init(x: 0, y: self.bounds.height - 1.25, width: self.bounds.width, height: 1.25)
+        gradient.frame = .init(x: 0, y: 0, width: self.bounds.width, height: height)
         gradient.colors = [UIColor.Theme.blue.cgColor, UIColor.Theme.purple.cgColor]
         
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradient.startPoint = startPosition
+        gradient.endPoint = endPosition
 
         self.layer.sublayers?.forEach { $0.removeFromSuperlayer()}
         self.layer.addSublayer(gradient)

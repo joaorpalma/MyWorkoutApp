@@ -26,9 +26,9 @@ class MWTextField: UITextField {
         self.placeholder = placeholder
     }
     
-    func createGradient() {
+    func createTFLineGradient() {
         let gradient = CAGradientLayer()
-        gradient.frame = .init(x: 0, y: self.bounds.height + 10, width: self.bounds.width, height: 1.25)
+        gradient.frame = .init(x: 0, y: self.bounds.height + 10, width: self.bounds.width, height: 1.4)
         gradient.colors = [UIColor.Theme.blue.cgColor, UIColor.Theme.purple.cgColor]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)

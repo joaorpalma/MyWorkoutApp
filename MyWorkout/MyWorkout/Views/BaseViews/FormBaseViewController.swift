@@ -46,12 +46,21 @@ class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewMod
         super.viewDidLayoutSubviews()
         _updateScrollViewSize()
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: nil) { _ in
+            self._updateScrollViewSize()
+        }
+    }
 
     private func _updateScrollViewSize() {
         if formContainerStackView.frame.height > view.frame.height {
             scrollView.contentSize.height = formContainerStackView.frame.size.height
+            scrollView.contentSize.width = formContainerStackView.frame.size.width
         } else {
             scrollView.contentSize.height = view.frame.height
+            scrollView.contentSize.width = view.frame.width
         }
     }
 }

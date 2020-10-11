@@ -57,7 +57,7 @@ class WelcomeViewController: FormBaseViewController<WelcomeViewModel> {
     }
     
     private func _createEmailLineGradient() {
-        _emailTextField.createGradient()
+        _emailTextField.createTFLineGradient()
         self.view.setNeedsDisplay()
         self.view.setNeedsLayout()
     }
