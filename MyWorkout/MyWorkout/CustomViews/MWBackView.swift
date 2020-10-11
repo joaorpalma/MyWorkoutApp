@@ -18,11 +18,11 @@ class MWBackView: UIView {
     
     private func _configure(_ title: String) {
         _titleLabel.text = title
-        _imageView.withWidth(44)
+        _imageView.withSize(CGSize(width: 24, height: 24))
         
         self.hstack(
-            _titleLabel,
             _imageView,
+            _titleLabel,
             spacing: 15
         )
     }

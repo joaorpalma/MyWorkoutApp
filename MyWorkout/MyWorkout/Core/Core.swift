@@ -19,6 +19,9 @@ struct Core {
 
     private static func _registerViewModels() {
         DiContainer.register(WelcomeViewModel.self, constructor: { WelcomeViewModel() })
+        DiContainer.register(RegisterViewModel.self, constructor: { RegisterViewModel() })
+        DiContainer.register(LoginViewModel.self, constructor: { LoginViewModel() })
+        DiContainer.register(ProfileViewModel.self, constructor: { ProfileViewModel() })
     }
 
     private static func _registerViewControllers() {
@@ -30,6 +33,6 @@ struct Core {
 
     private static func _startApp() {
         let navigationService: NavigationService = DiContainer.resolve()
-        navigationService.navigateAndSetAsContainer(viewModel: WelcomeViewModel.self)
+        navigationService.navigateAndSetAsContainer(viewModel: RegisterViewModel.self)
     }
 }

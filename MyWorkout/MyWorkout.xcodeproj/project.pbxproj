@@ -47,6 +47,7 @@
 		9D28374025320E6100ABBE05 /* MWNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28373F25320E6100ABBE05 /* MWNextView.swift */; };
 		9D28374425320F6400ABBE05 /* MWBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28374325320F6400ABBE05 /* MWBackView.swift */; };
 		9D2837482532200C00ABBE05 /* MWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2837472532200C00ABBE05 /* MWTextField.swift */; };
+		9D28374F253272E600ABBE05 /* MWSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28374E253272E600ABBE05 /* MWSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		9D28373F25320E6100ABBE05 /* MWNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWNextView.swift; sourceTree = "<group>"; };
 		9D28374325320F6400ABBE05 /* MWBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWBackView.swift; sourceTree = "<group>"; };
 		9D2837472532200C00ABBE05 /* MWTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWTextField.swift; sourceTree = "<group>"; };
+		9D28374E253272E600ABBE05 /* MWSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWSelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +343,7 @@
 				9D28373F25320E6100ABBE05 /* MWNextView.swift */,
 				9D28374325320F6400ABBE05 /* MWBackView.swift */,
 				9D2837472532200C00ABBE05 /* MWTextField.swift */,
+				9D28374E253272E600ABBE05 /* MWSelectView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				9D28371F253203C200ABBE05 /* LoginViewController.swift in Sources */,
 				9D28374025320E6100ABBE05 /* MWNextView.swift in Sources */,
 				9D2836F72531387300ABBE05 /* BaseViewController.swift in Sources */,
+				9D28374F253272E600ABBE05 /* MWSelectView.swift in Sources */,
 				9D2836D22531136700ABBE05 /* Core.swift in Sources */,
 				9D2836DB2531336A00ABBE05 /* DiContainer.swift in Sources */,
 				9D2836E4253133D800ABBE05 /* Command{T}.swift in Sources */,

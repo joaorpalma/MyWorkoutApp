@@ -14,13 +14,15 @@ class WelcomeViewController: FormBaseViewController<WelcomeViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
-        self.view.backgroundColor = .systemBackground
         _configureView()
     }
     
     private func _configureView() {
-        let view = UIView().stack(_topView, _emailTextField, spacing: 120).padTop(60).padLeft(40).padRight(40).padBottom(120)
+        let view = UIView().stack(
+            _topView,
+            _emailTextField,
+            spacing: 120
+        ).padTop(60).padLeft(40).padRight(40).padBottom(120)
         
         self.formContainerStackView.addArrangedSubview(view)
         

@@ -19,8 +19,8 @@ class BaseViewController<TViewModel: ViewModel>: UIViewController {
     }
 
     private func _setViewConfigurations() {
-        view.backgroundColor = UIColor.systemBackground
-        navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.isNavigationBarHidden = true
+        self.view.backgroundColor = .systemBackground
     }
 
     private func _instantiateViewModel() {

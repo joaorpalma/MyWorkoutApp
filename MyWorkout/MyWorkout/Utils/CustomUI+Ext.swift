@@ -49,3 +49,17 @@ extension UIColor {
         return UIColor(red: (red/255.0), green: (green/255.0), blue: (blue/255.0), alpha: alpha)
     }
 }
+
+extension UIView {
+    func createLineGradient() {
+        let gradient = CAGradientLayer()
+        gradient.frame = .init(x: 0, y: self.bounds.height - 1.25, width: self.bounds.width, height: 1.25)
+        gradient.colors = [UIColor.Theme.blue.cgColor, UIColor.Theme.purple.cgColor]
+        
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+
+        self.layer.sublayers?.forEach { $0.removeFromSuperlayer()}
+        self.layer.addSublayer(gradient)
+    }
+}
