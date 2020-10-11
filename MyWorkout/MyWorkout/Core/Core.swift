@@ -33,6 +33,6 @@ struct Core {
 
     private static func _startApp() {
         let navigationService: NavigationService = DiContainer.resolve()
-        navigationService.navigateAndSetAsContainer(viewModel: RegisterViewModel.self)
+        navigationService.navigateAndSetAsContainer(viewModel: LoginViewModel.self)
     }
 }
