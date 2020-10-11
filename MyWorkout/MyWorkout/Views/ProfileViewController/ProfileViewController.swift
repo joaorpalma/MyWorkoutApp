@@ -25,6 +25,7 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .systemGroupedBackground
         _configureView()
     }
     
@@ -65,9 +66,9 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
         _profileImageWidthConstraint = _profileImageView.widthAnchor.constraint(
             equalToConstant: _profileImageHeightConstraint!.constant)
         
-        _profileImageHeightConstraint!.isActive = true
-        _profileBackgroundViewHeightConstraint!.isActive = true
-        _profileImageWidthConstraint!.isActive = true
+        [_profileImageHeightConstraint,
+         _profileBackgroundViewHeightConstraint,
+         _profileImageWidthConstraint].forEach { $0?.isActive = true }
         
         _profileImageView.layer.cornerRadius = _profileImageHeightConstraint!.constant / 2
     }
@@ -109,10 +110,14 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
     
     private func _resizeProfileView() {
         _createProfileBackgroundGradient()
-        _profileBackgroundView.removeConstraint(_profileBackgroundViewHeightConstraint!)
-        _profileImageView.removeConstraint(_profileImageHeightConstraint!)
-        _profileImageView.removeConstraint(_profileImageWidthConstraint!)
-        _setProfileSize()
+        _setProfileConstraints()
+    }
+    
+    private func _setProfileConstraints() {
+        _profileBackgroundViewHeightConstraint?.constant = self.view.bounds.height / _profileBackgroundViewRatio
+        _profileImageHeightConstraint?.constant = _profileBackgroundViewHeightConstraint!.constant / 2
+        _profileImageWidthConstraint?.constant = _profileImageHeightConstraint!.constant
+        _profileImageView.layer.cornerRadius = _profileImageHeightConstraint!.constant / 2
     }
     
     private func _createProfileBackgroundGradient() {
