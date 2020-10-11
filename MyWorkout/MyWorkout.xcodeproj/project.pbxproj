@@ -53,6 +53,7 @@
 		9D8382FE2533ACA0003A20B3 /* DialogServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8382FD2533ACA0003A20B3 /* DialogServiceImp.swift */; };
 		9D8383032533AD62003A20B3 /* InfoDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383022533AD62003A20B3 /* InfoDialogView.swift */; };
 		9D8383072533AD95003A20B3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383062533AD95003A20B3 /* Utils.swift */; };
+		9D83830B2533B21E003A20B3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83830A2533B21E003A20B3 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		9D8382FD2533ACA0003A20B3 /* DialogServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogServiceImp.swift; sourceTree = "<group>"; };
 		9D8383022533AD62003A20B3 /* InfoDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDialogView.swift; sourceTree = "<group>"; };
 		9D8383062533AD95003A20B3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		9D83830A2533B21E003A20B3 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				9D2836E6253133F300ABBE05 /* Collection.swift */,
+				9D83830A2533B21E003A20B3 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				9D2836E1253133AE00ABBE05 /* TypeAlias.swift in Sources */,
 				9D8383032533AD62003A20B3 /* InfoDialogView.swift in Sources */,
 				9D28370F25313B3A00ABBE05 /* UIStackView.swift in Sources */,
+				9D83830B2533B21E003A20B3 /* StringExtensions.swift in Sources */,
 				9D2836FA2531388D00ABBE05 /* ViewModel.swift in Sources */,
 				9D28371625313C0300ABBE05 /* NavigationServiceImp.swift in Sources */,
 				9D28371C25313C5300ABBE05 /* WelcomeViewModel.swift in Sources */,

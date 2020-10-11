@@ -22,7 +22,7 @@ class BaseViewController<TViewModel: ViewModel>: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = .systemBackground
     }
-
+    
     private func _instantiateViewModel() {
         let viewM: TViewModel = DiContainer.resolve()
 
