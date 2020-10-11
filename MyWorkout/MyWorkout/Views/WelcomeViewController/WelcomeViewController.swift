@@ -55,8 +55,8 @@ class WelcomeViewController: FormBaseViewController<WelcomeViewModel>, UITextFie
     private func _configureEmailTextField() {
         _emailTextField.delegate = self
         _emailTextField.keyboardType = .emailAddress
+        self.lowestElement = _emailTextField
     }
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.endEditing(true)
