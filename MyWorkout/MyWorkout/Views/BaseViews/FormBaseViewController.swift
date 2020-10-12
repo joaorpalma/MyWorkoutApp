@@ -71,10 +71,9 @@ class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewMod
             scrollView.contentInset.bottom -= distanceToBottom
         }
         
-        if formContainerStackView.frame.height > view.frame.height {
-            scrollView.contentOffset = .init(x: 0, y: distanceToBottom)
-        }
+        scrollView.contentOffset = .init(x: 0, y: scrollView.contentOffset.y + abs(keyboardFrame.height - distanceToBottom))
     }
+    
     
     @objc fileprivate func handleKeyboardHide() {
         _isKeyboardVisible = false
@@ -85,7 +84,7 @@ class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewMod
     private func _distanceFromLowestElementToBottom() -> CGFloat {
         if lowestElement != nil {
             guard let frame = lowestElement.superview?.convert(lowestElement.frame, to: view) else { return 0 }
-            let distance = view.frame.height - frame.origin.y - frame.height
+            let distance = view.frame.height - frame.origin.y - (frame.height + 25)
             return distance
         }
         
