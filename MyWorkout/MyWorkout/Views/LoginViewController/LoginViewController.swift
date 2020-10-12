@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: FormBaseViewController<LoginViewModel> {
+class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDelegate {
     private let _topView = MWTopView(title: "Welcome back", subtitle: "Enter your password to log in.")
     
     private let _emailTextField = MWTextField(placeholder: "")
@@ -23,6 +23,7 @@ class LoginViewController: FormBaseViewController<LoginViewModel> {
     
     private func _configureView() {
         _configureEmailTextField()
+        _configurePasswordTextField()
         _configureBackViewButton()
 
         let formView = UIView().stack(
@@ -43,8 +44,14 @@ class LoginViewController: FormBaseViewController<LoginViewModel> {
     }
     
     private func _configureEmailTextField() {
-        _emailTextField.text = self.viewModel.profileEmail
+        _emailTextField.text = viewModel.profile.getEmail()
         _emailTextField.isEnabled = false
+    }
+    
+    private func _configurePasswordTextField() {
+        self.lowestElement = _passwordTextField
+        _passwordTextField.delegate = self
+        _passwordTextField.isSecureTextEntry = true
     }
     
     private func _configureBackViewButton() {
@@ -52,7 +59,7 @@ class LoginViewController: FormBaseViewController<LoginViewModel> {
     }
     
     @objc private func _navigateBack() {
-        self.viewModel.navigateBackCommand.execute()
+        viewModel.navigateBackCommand.execute()
     }
     
     private func _createNavigation() {
@@ -69,8 +76,23 @@ class LoginViewController: FormBaseViewController<LoginViewModel> {
         
         bottomView.anchor(top: nil, leading: self.view.safeAreaLayoutGuide.leadingAnchor,
                           bottom: self.view.bottomAnchor, trailing: self.view.safeAreaLayoutGuide.trailingAnchor)
+        
+        _createNextViewTapGesture()
     }
     
+    private func _createNextViewTapGesture() {
+        _nextView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_checkPassword)))
+    }
+    
+    @objc private func _checkPassword() {
+        viewModel.checkPasswordCommand.execute(_passwordTextField.text!)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        _checkPassword()
+        return true
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         _createFormLineGradient()

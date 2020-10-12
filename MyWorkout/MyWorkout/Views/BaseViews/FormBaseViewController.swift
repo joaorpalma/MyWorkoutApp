@@ -112,4 +112,8 @@ class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewMod
             scrollView.contentSize.width = view.frame.width
         }
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }

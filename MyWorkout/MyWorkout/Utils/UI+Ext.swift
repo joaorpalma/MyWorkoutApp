@@ -12,6 +12,7 @@ extension UIColor {
         static var blue = UIColor().fromRGBA(red: 36, green: 187, blue: 200, alpha: 1.0)
         static var purple = UIColor().fromRGBA(red: 94, green: 74, blue: 186, alpha: 1.0)
         static var grey = UIColor().fromRGBA(red: 101, green: 114, blue: 114, alpha: 1.0)
+        static var green = UIColor().fromRGBA(red: 65, green: 169, blue: 75, alpha: 1.0)
         static var red = UIColor().fromRGBA(red: 229, green: 38, blue: 23, alpha: 1.0)
         static var yellow = UIColor().fromRGBA(red: 237, green: 202, blue: 45, alpha: 1.0)
     }

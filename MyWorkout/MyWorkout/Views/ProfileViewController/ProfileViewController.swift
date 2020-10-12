@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileViewController: BaseViewController<ProfileViewModel> {
     private let _tableView = UITableView()
-    private let _tableViewDataSource = ProfileDataSource()
+    private lazy var _tableViewDataSource = ProfileDataSource(profileDetails: self.viewModel.profileDetails)
     
     private let _profileBackgroundView = UIView()
     private let _gradientView = UIView()
@@ -38,8 +38,8 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
     private func _configureProfile() {
         self.view.addSubview(_profileBackgroundView)
         _profileBackgroundView.anchor(top: self.view.topAnchor, leading: self.view.leadingAnchor, bottom: nil, trailing: self.view.trailingAnchor)
-        
         _profileBackgroundView.addSubview(_gradientView)
+        _profileBackgroundView.backgroundColor = UIColor.Theme.blue
         _gradientView.fillSuperview()
         
         let profileView = UIView().stack(
@@ -75,10 +75,6 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
     
     private func _configureTableView() {
         self.view.addSubview(_tableView)
-        _tableViewDataSource.profileDetails = [
-            ProfileDetail(description: "Email", value: "joaowd@outlook.com"),
-            ProfileDetail(description: "Gender", value: "Male")
-        ]
         
         _tableView.tableFooterView = UIView()
         _tableView.backgroundColor = .systemGroupedBackground
@@ -95,6 +91,12 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
                              trailing: self.view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 0, left: 40, bottom: 40, right: 40))
         
         _logoutButton.withHeight(50)
+        
+        _logoutButton.addTarget(self, action: #selector(_signOutProfile), for: .touchUpInside)
+    }
+    
+    @objc private func _signOutProfile() {
+        viewModel.signOutCommand.execute()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -123,8 +125,7 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
     
     private func _createProfileBackgroundGradient() {
         _gradientView.createGradient(height: self.view.bounds.height / _profileBackgroundViewRatio,
-                                              startPosition: CGPoint(x: 0, y: 0), endPosition: CGPoint(x: 1, y: 1))
-        
+                                     startPosition: CGPoint(x: 0, y: 0), endPosition: CGPoint(x: 1, y: 1))
         self.view.setNeedsDisplay()
         self.view.setNeedsLayout()
     }

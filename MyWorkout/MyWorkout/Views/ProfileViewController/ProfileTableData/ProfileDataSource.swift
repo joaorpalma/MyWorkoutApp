@@ -8,12 +8,16 @@
 import UIKit
 
 class ProfileDataSource: NSObject, UITableViewDataSource {
-    var profileDetails: [ProfileDetail] = []
+    private let _profileDetails: [ProfileDetail]
+    
+    init(profileDetails: [ProfileDetail]) {
+        _profileDetails = profileDetails
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
         
-        guard let detail = profileDetails[safe: indexPath.row] else { return UITableViewCell() }
+        guard let detail = _profileDetails[safe: indexPath.row] else { return UITableViewCell() }
         
         cell.textLabel?.text = detail.getDescription()
         cell.detailTextLabel?.text = detail.getValue()
@@ -27,6 +31,6 @@ class ProfileDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        profileDetails.count
+        _profileDetails.count
     }
 }

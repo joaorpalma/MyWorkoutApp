@@ -16,19 +16,20 @@ class ContainerViewController: UIViewController {
     }
 
     func changeViewController(_ viewController: UIViewController) {
-        guard _checkIfCurrentViewControllerIsNotEqualsToNew(viewController) else { return }
+        guard _canChangeContainerViewController(viewController) else { return }
 
         _removeCurrentViewController()
         _addNewViewControllerToContainer(viewController)
     }
 
-    private func _checkIfCurrentViewControllerIsNotEqualsToNew(_ viewController: UIViewController) -> Bool {
+    private func _canChangeContainerViewController(_ viewController: UIViewController) -> Bool {
         return currentViewController != viewController.self
     }
 
     private func _removeCurrentViewController() {
         if currentViewController != nil {
             self.willMove(toParent: nil)
+            currentViewController?.navigationController?.popToRootViewController(animated: true)
             currentViewController!.removeFromParent()
             currentViewController!.view.removeFromSuperview()
             currentViewController = nil

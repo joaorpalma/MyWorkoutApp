@@ -48,8 +48,7 @@ class WelcomeViewController: FormBaseViewController<WelcomeViewModel>, UITextFie
     }
     
     private func _createNextViewTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(_checkEmail))
-        _nextView.addGestureRecognizer(tapGesture)
+        _nextView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_checkEmail)))
     }
     
     private func _configureEmailTextField() {
@@ -65,7 +64,7 @@ class WelcomeViewController: FormBaseViewController<WelcomeViewModel>, UITextFie
     }
     
     @objc private func _checkEmail() {
-        self.viewModel.checkEmailCommand.execute(_emailTextField.text!)
+        viewModel.checkEmailCommand.execute(_emailTextField.text!)
     }
     
     override func viewWillAppear(_ animated: Bool) {

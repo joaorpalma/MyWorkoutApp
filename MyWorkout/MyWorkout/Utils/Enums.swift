@@ -11,14 +11,15 @@ enum FormAlignment {
     case top, center
 }
 
-enum InfoDialogType {
-    case bad
-    case info
-}
-
 enum Gender: String {
     case Male = "Male"
     case Female = "Female"
+}
+
+enum InfoDialogType {
+    case good
+    case bad
+    case info
 }
 
 extension InfoDialogType: RawRepresentable {
@@ -26,6 +27,7 @@ extension InfoDialogType: RawRepresentable {
 
     init?(rawValue: RawValue) {
         switch rawValue {
+        case UIColor.Theme.green: self = .good
         case UIColor.Theme.red: self = .bad
         case UIColor.Theme.yellow: self = .info
         default: return nil
@@ -34,6 +36,7 @@ extension InfoDialogType: RawRepresentable {
 
     var rawValue: RawValue {
         switch self {
+        case .good: return UIColor.Theme.green
         case .bad: return UIColor.Theme.red
         case .info: return UIColor.Theme.yellow
         }

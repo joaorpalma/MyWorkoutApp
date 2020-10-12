@@ -32,11 +32,10 @@ class NavigationServiceImp: NavigationService {
     }
 
     private func _setNewContainerViewController(_ viewController: UIViewController) {
-        //swiftlint:disable force_cast
-        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
-        //swiftlint:enable force_cast
-        _containerViewController = sceneDelegate.containerViewController
-        _containerViewController?.changeViewController(viewController)
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+            _containerViewController ??= sceneDelegate.containerViewController
+            _containerViewController!.changeViewController(viewController)
+        }
     }
 
     func close(arguments: Any?, animated: Bool) {

@@ -23,8 +23,9 @@ struct Core {
     private static func _registerViewModels() {
         DiContainer.register(WelcomeViewModel.self, constructor: { WelcomeViewModel(dialogService: DiContainer.resolve(), jsonFileManager: DiContainer.resolve()) })
         DiContainer.register(RegisterViewModel.self, constructor: { RegisterViewModel() })
-        DiContainer.register(LoginViewModel.self, constructor: { LoginViewModel() })
-        DiContainer.register(ProfileViewModel.self, constructor: { ProfileViewModel() })
+        DiContainer.register(LoginViewModel.self, constructor: { LoginViewModel(dialogService: DiContainer.resolve(), appSettingsService: DiContainer.resolve()) })
+        DiContainer.register(ProfileViewModel.self, constructor: { ProfileViewModel(jsonFileManager: DiContainer.resolve(), appSettingsService: DiContainer.resolve(),
+                                                                                    dialogService: DiContainer.resolve()) })
     }
 
     private static func _registerViewControllers() {

@@ -33,9 +33,9 @@ class WelcomeViewModel: ViewModelBase {
     }
     
     private func _checkEmail(_ email: String) {
-        if (email.isValidEmail) {
-            if(_isEmailRegistered(email)) {
-                navigationService.navigate(viewModel: LoginViewModel.self, arguments: email, animated: true)
+        if email.isValidEmail {
+            if let profile = _profileWithMatchedEmail(email) {
+                navigationService.navigate(viewModel: LoginViewModel.self, arguments: profile, animated: true)
             } else {
                 navigationService.navigate(viewModel: RegisterViewModel.self, arguments: email, animated: true)
             }
@@ -44,12 +44,12 @@ class WelcomeViewModel: ViewModelBase {
         }
     }
     
-    private func _isEmailRegistered(_ value: String) -> Bool {
-        return _profileList.contains(where: { $0.matchesEmail(value) })
+    private func _profileWithMatchedEmail(_ value: String) -> Profile? {
+        return _profileList.first(where: { $0.matchesEmail(value) })
     }
     
     private func _enterValidEmailInfo(_ value: String) {
-        if(value.isEmpty) {
+        if value.isEmpty {
             _dialogService.showInfo("Enter an email first.", informationType: .info)
         } else {
             _dialogService.showInfo("Please enter a valid email.", informationType: .bad)

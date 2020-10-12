@@ -12,7 +12,7 @@
 		9D2836B4252FEDF800ABBE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2836B3252FEDF800ABBE05 /* Assets.xcassets */; };
 		9D2836B7252FEDF800ABBE05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2836B5252FEDF800ABBE05 /* LaunchScreen.storyboard */; };
 		9D2836C825310FF100ABBE05 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836C725310FF100ABBE05 /* ContainerViewController.swift */; };
-		9D2836CD2531107800ABBE05 /* CustomUI+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836CC2531107800ABBE05 /* CustomUI+Ext.swift */; };
+		9D2836CD2531107800ABBE05 /* UI+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836CC2531107800ABBE05 /* UI+Ext.swift */; };
 		9D2836D22531136700ABBE05 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836D12531136700ABBE05 /* Core.swift */; };
 		9D2836DB2531336A00ABBE05 /* DiContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836DA2531336A00ABBE05 /* DiContainer.swift */; };
 		9D2836DE2531338500ABBE05 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2836DD2531338500ABBE05 /* Command.swift */; };
@@ -71,7 +71,7 @@
 		9D2836B6252FEDF800ABBE05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D2836B8252FEDF800ABBE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D2836C725310FF100ABBE05 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		9D2836CC2531107800ABBE05 /* CustomUI+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUI+Ext.swift"; sourceTree = "<group>"; };
+		9D2836CC2531107800ABBE05 /* UI+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Ext.swift"; sourceTree = "<group>"; };
 		9D2836D12531136700ABBE05 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		9D2836DA2531336A00ABBE05 /* DiContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiContainer.swift; sourceTree = "<group>"; };
 		9D2836DD2531338500ABBE05 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				9D28370525313ACB00ABBE05 /* UIViewHelpers */,
-				9D2836CC2531107800ABBE05 /* CustomUI+Ext.swift */,
+				9D2836CC2531107800ABBE05 /* UI+Ext.swift */,
 				9D2836E0253133AE00ABBE05 /* TypeAlias.swift */,
 				9D2836FF253138F100ABBE05 /* Enums.swift */,
 				9D8383062533AD95003A20B3 /* Utils.swift */,
@@ -515,7 +515,7 @@
 				9D2837292532043300ABBE05 /* ProfileViewController.swift in Sources */,
 				9D8383072533AD95003A20B3 /* Utils.swift in Sources */,
 				9D2836AA252FEDF500ABBE05 /* SceneDelegate.swift in Sources */,
-				9D2836CD2531107800ABBE05 /* CustomUI+Ext.swift in Sources */,
+				9D2836CD2531107800ABBE05 /* UI+Ext.swift in Sources */,
 				9D28371025313B3A00ABBE05 /* UIButton.swift in Sources */,
 				9D28371325313B3A00ABBE05 /* AspectFitImageView.swift in Sources */,
 				9D2836E7253133F300ABBE05 /* Collection.swift in Sources */,
