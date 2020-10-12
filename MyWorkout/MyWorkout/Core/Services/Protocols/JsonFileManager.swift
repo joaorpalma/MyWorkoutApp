@@ -10,5 +10,5 @@ import Foundation
 
 protocol JsonFileManager {
     func retrieveFromJsonFile<T: Codable>(fileName: String) -> T?
-    func saveToJsonFile(fileName: String,dict: [[String:Any]])
+    func saveToJsonFile<T: Codable>(fileName: String, data: T)
 }

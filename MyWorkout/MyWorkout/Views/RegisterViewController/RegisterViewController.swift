@@ -56,7 +56,7 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel>, UITextF
     }
     
     private func _configureEmailTextField() {
-        _emailTextField.text = "joaowd@outlook.com"
+        _emailTextField.text = viewModel.profileEmail
         _emailTextField.isEnabled = false
     }
     
@@ -68,13 +68,10 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel>, UITextF
         _passwordTextField.textContentType = .username
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.endEditing(true)
-        _savePassword()
-        return true
-    }
-    
     private func _configureSelectView() {
+        _selectFemale.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_selectGenderFemale)))
+        _selectMale.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_selectGenderMale)))
+        
         _selectView = UIView().hstack(
             UIView(),
             _selectFemale,
@@ -117,6 +114,24 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel>, UITextF
     
     @objc private func _savePassword() {
         viewModel.savePasswordCommand.executeIf(_passwordTextField.text!)
+    }
+    
+    @objc private func _selectGenderFemale() {
+        _selectMale.unselect()
+        _selectFemale.select()
+        viewModel.saveGenderCommand.executeIf(.Female)
+    }
+    
+    @objc private func _selectGenderMale() {
+        _selectMale.select()
+        _selectFemale.unselect()
+        viewModel.saveGenderCommand.executeIf(.Male)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        _savePassword()
+        return true
     }
     
     override func viewDidAppear(_ animated: Bool) {

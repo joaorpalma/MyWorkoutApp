@@ -73,7 +73,7 @@ class RegisterViewModel: ViewModelBase {
     }
     
     private func _registerProfile() {
-        //_jsonFileManager
+        _jsonFileManager.saveToJsonFile(fileName: "profiles", data: [profileStruct])
         _appSettingsService.profileEmailSignedIn = profileStruct.email
     }
     

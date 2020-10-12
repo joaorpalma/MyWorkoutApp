@@ -24,6 +24,21 @@ class JsonFileManagerImp: JsonFileManager {
         }
     }
     
+    func saveToJsonFile<T>(fileName: String, data: T) where T : Decodable, T : Encodable {
+        if let filePath = Bundle.main.path(forResource: fileName, ofType: "json") {
+            do {
+                let fileUrl = URL(fileURLWithPath: filePath)
+                let encoder = JSONEncoder()
+                encoder.outputFormatting = .prettyPrinted
+                let jsonData = try encoder.encode(data)
+                try jsonData.write(to: fileUrl)
+           } catch {
+               print(error)
+               fatalError("Unable to write contents to file")
+           }
+        }
+    }
+    
     func saveToJsonFile(fileName:String, dict:[[String:Any]]) {
         guard let documentDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
         let fileUrl = documentDirectoryUrl.appendingPathComponent("\(fileName).json")

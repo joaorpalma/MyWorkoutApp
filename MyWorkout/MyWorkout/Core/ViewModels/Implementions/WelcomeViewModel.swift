@@ -10,22 +10,32 @@ import Foundation
 class WelcomeViewModel: ViewModelBase {
     private let _dialogService: DialogService
     private let _jsonFileManager: JsonFileManager
+    private let _appSettingsService: AppSettingsService
     
     private var _profileList: [Profile] = []
     
     private(set) lazy var checkEmailCommand = WpCommand<String>(_checkEmail)
     
-    init(dialogService: DialogService, jsonFileManager: JsonFileManager) {
+    init(dialogService: DialogService, jsonFileManager: JsonFileManager, appSettingsService: AppSettingsService) {
         _dialogService = dialogService
         _jsonFileManager = jsonFileManager
+        _appSettingsService = appSettingsService
     }
     
     override func initialize() {
-        _getProfilesInFileManager()
+        _checkIfUserIsLoggedIn()
+    }
+    
+    private func _checkIfUserIsLoggedIn() {
+        if(!_appSettingsService.profileEmailSignedIn.isEmpty) {
+            navigationService.navigateAndSetAsContainer(viewModel: ProfileViewModel.self)
+        } else {
+            _getProfilesInFileManager()
+        }
     }
     
     private func _getProfilesInFileManager() {
-        let profiles: [ProfileStruct]? = _jsonFileManager.retrieveFromJsonFile(fileName: "profiles_db")
+        let profiles: [ProfileStruct]? = _jsonFileManager.retrieveFromJsonFile(fileName: "profiles")
         
         profiles.map { $0.forEach { profile in
             _profileList.append(Profile(email: profile.email, password: profile.password, gender: Gender.init(rawValue: profile.gender)!))

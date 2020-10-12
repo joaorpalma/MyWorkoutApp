@@ -30,7 +30,7 @@ class ProfileViewModel: ViewModelBase {
     
     
     private func _getProfilesInFileManager() {
-        let profiles: [ProfileStruct]? = _jsonFileManager.retrieveFromJsonFile(fileName: "profiles_db")
+        let profiles: [ProfileStruct]? = _jsonFileManager.retrieveFromJsonFile(fileName: "profiles")
         
         profiles.map { $0.forEach { profile in
             _profileList.append(Profile(email: profile.email, password: profile.password, gender: Gender.init(rawValue: profile.gender)!))
@@ -40,8 +40,12 @@ class ProfileViewModel: ViewModelBase {
     
     private func _getSignedInProfile() {
         let profileEmail = _appSettingsService.profileEmailSignedIn
-        let profile = _profileList.first(where: { $0.matchesEmail(profileEmail) })
-        _fillProfileDetails(profile!)
+        guard let profile = _profileList.first(where: { $0.matchesEmail(profileEmail) }) else {
+            _signOut()
+            return
+        }
+        
+        _fillProfileDetails(profile)
     }
     
     private func _fillProfileDetails(_ profile: Profile) {
