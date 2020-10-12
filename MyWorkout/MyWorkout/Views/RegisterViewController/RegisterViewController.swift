@@ -21,12 +21,15 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel>, UITextF
     private var _selectView: UIView?
     private let _underlineView = UIView()
     
+    private lazy var _activityIndicatorView = self.createActivityIndicatory()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         _configureView()
     }
     
     private func _configureView() {
+        _configureActivityIndicator()
         _configureEmailTextField()
         _configurePasswordTextField()
         _configureSelectView()
@@ -53,6 +56,16 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel>, UITextF
         self.formContainerStackView.addArrangedSubview(view)
     
         _createNavigation()
+    }
+    
+    private func _configureActivityIndicator() {
+        viewModel.isBusy.addObserver(self, completionHandler: {
+            if(self.viewModel.isBusy.value) {
+                self._activityIndicatorView.startAnimating()
+            } else {
+                self._activityIndicatorView.stopAnimating()
+            }
+        })
     }
     
     private func _configureEmailTextField() {

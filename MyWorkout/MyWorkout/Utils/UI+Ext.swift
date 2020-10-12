@@ -7,6 +7,16 @@
 
 import UIKit
 
+extension UIViewController {
+    func createActivityIndicatory() -> UIActivityIndicatorView {
+        let activityView = UIActivityIndicatorView(style: .large)
+        activityView.center = view.center
+        self.view.addSubview(activityView)
+        
+        return activityView
+    }
+}
+
 extension UIColor {
     struct Theme {
         static var blue = UIColor().fromRGBA(red: 36, green: 187, blue: 200, alpha: 1.0)

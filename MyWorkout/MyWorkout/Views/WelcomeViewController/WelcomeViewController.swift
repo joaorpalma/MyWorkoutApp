@@ -54,6 +54,7 @@ class WelcomeViewController: FormBaseViewController<WelcomeViewModel>, UITextFie
     private func _configureEmailTextField() {
         _emailTextField.delegate = self
         _emailTextField.keyboardType = .emailAddress
+        _emailTextField.textContentType = .oneTimeCode
         self.lowestElement = _emailTextField
     }
     

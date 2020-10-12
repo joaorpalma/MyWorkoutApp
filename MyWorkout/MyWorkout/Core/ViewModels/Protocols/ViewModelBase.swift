@@ -8,6 +8,7 @@
 import Foundation
 
 class ViewModelBase: ViewModel {
+    let isBusy : DynamicValue<Bool> = DynamicValue<Bool>(false)
     private(set) var navigationService: NavigationService = DiContainer.resolve()
 
     func prepare(dataObject: Any) {}

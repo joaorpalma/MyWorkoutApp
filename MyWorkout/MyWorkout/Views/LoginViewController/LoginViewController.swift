@@ -12,9 +12,10 @@ class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDe
     
     private let _emailTextField = MWTextField(placeholder: "")
     private let _passwordTextField = MWTextField(placeholder: "Password")
-    
     private let _nextView = MWNextView(title: "Log in")
     private let _backView = MWBackView(title: "Cancel")
+    
+    private lazy var _activityIndicatorView = self.createActivityIndicatory()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDe
     }
     
     private func _configureView() {
+        _configureActivityIndicator()
         _configureEmailTextField()
         _configurePasswordTextField()
 
@@ -40,6 +42,16 @@ class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDe
         self.formContainerStackView.addArrangedSubview(view)
     
         _createNavigation()
+    }
+    
+    private func _configureActivityIndicator() {
+        viewModel.isBusy.addObserver(self, completionHandler: {
+            if(self.viewModel.isBusy.value) {
+                self._activityIndicatorView.startAnimating()
+            } else {
+                self._activityIndicatorView.stopAnimating()
+            }
+        })
     }
     
     private func _configureEmailTextField() {

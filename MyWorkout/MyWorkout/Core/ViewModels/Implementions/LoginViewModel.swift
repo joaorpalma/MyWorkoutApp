@@ -11,8 +11,6 @@ class LoginViewModel: ViewModelBase {
     private let _dialogService: DialogService
     private var _appSettingsService: AppSettingsService
     
-    private var _isBusy = false
-    
     private(set) var profile: Profile!
     
     private(set) lazy var checkPasswordCommand = WpCommand(_checkPassword, canExecute: _canExecute)
@@ -45,10 +43,10 @@ class LoginViewModel: ViewModelBase {
     }
     
     private func _navigateToProfile() {
-        _isBusy = true
+        isBusy.value = true
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self._isBusy = false
+            self.isBusy.value = false
             self.navigationService.navigateAndSetAsContainer(viewModel: ProfileViewModel.self)
         }
     }
@@ -66,6 +64,6 @@ class LoginViewModel: ViewModelBase {
     }
     
     private func _canExecute() -> Bool{
-        !_isBusy
+        !isBusy.value
     }
 }

@@ -12,8 +12,6 @@ class RegisterViewModel: ViewModelBase {
     private let _jsonFileManager: JsonFileManager
     private var _appSettingsService: AppSettingsService
     
-    private var _isBusy = false
-    
     private(set) var profileEmail: String!
     private var profileStruct = ProfileStruct()
     
@@ -63,10 +61,10 @@ class RegisterViewModel: ViewModelBase {
     }
     
     private func _navigateToProfile() {
-        _isBusy = true
+        isBusy.value = true
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self._isBusy = false
+            self.isBusy.value = false
             self.navigationService.navigateAndSetAsContainer(viewModel: ProfileViewModel.self)
             self._dialogService.showInfo("Account created.", informationType: .good)
         }
@@ -82,6 +80,6 @@ class RegisterViewModel: ViewModelBase {
     }
     
     private func _canExecute() -> Bool {
-        !_isBusy
+        !isBusy.value
     }
 }

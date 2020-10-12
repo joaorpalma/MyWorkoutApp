@@ -61,6 +61,7 @@
 		9D83831F2534CAA1003A20B3 /* JsonFileManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83831E2534CAA1003A20B3 /* JsonFileManagerImp.swift */; };
 		9D8383222534CAF9003A20B3 /* JsonFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383212534CAF9003A20B3 /* JsonFileManager.swift */; };
 		9D8383282534CEE8003A20B3 /* ProfileStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383272534CEE8003A20B3 /* ProfileStruct.swift */; };
+		9DC1B44825351ADB0017B8F7 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1B44725351ADB0017B8F7 /* DynamicValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		9D83831E2534CAA1003A20B3 /* JsonFileManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileManagerImp.swift; sourceTree = "<group>"; };
 		9D8383212534CAF9003A20B3 /* JsonFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileManager.swift; sourceTree = "<group>"; };
 		9D8383272534CEE8003A20B3 /* ProfileStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStruct.swift; sourceTree = "<group>"; };
+		9DC1B44725351ADB0017B8F7 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 		9D2836D6253132C900ABBE05 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				9DC1B44625351AC30017B8F7 /* Observer */,
 				9D2836D92531332F00ABBE05 /* Extensions */,
 				9D2836D82531331E00ABBE05 /* Command */,
 				9D2836D7253132EB00ABBE05 /* DependencyInjection */,
@@ -419,6 +422,14 @@
 			path = DataStructures;
 			sourceTree = "<group>";
 		};
+		9DC1B44625351AC30017B8F7 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1B44725351ADB0017B8F7 /* DynamicValue.swift */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -532,6 +543,7 @@
 				9D28371225313B3A00ABBE05 /* AnchoredConstraints.swift in Sources */,
 				9D8383162534C890003A20B3 /* AppSettingsServiceImp.swift in Sources */,
 				9D2836F42531382100ABBE05 /* WelcomeViewController.swift in Sources */,
+				9DC1B44825351ADB0017B8F7 /* DynamicValue.swift in Sources */,
 				9D28370D25313B3900ABBE05 /* UIView+Layout.swift in Sources */,
 				9D28370E25313B3900ABBE05 /* UIView+Stacking.swift in Sources */,
 				9D2837482532200C00ABBE05 /* MWTextField.swift in Sources */,
