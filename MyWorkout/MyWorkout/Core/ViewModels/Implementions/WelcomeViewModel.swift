@@ -9,15 +9,27 @@ import Foundation
 
 class WelcomeViewModel: ViewModelBase {
     private let _dialogService: DialogService
+    private let _jsonFileManager: JsonFileManager
+    
+    private var _profileList: [Profile] = []
     
     private(set) lazy var checkEmailCommand = WpCommand<String>(_checkEmail)
     
-    init(dialogService: DialogService) {
+    init(dialogService: DialogService, jsonFileManager: JsonFileManager) {
         _dialogService = dialogService
+        _jsonFileManager = jsonFileManager
     }
     
     override func initialize() {
-        //register "registered@email.com" "password"
+        _getProfilesInFileManager()
+    }
+    
+    private func _getProfilesInFileManager() {
+        let profiles: [ProfileStruct]? = _jsonFileManager.retrieveFromJsonFile(fileName: "profiles_db")
+        
+        profiles.map { $0.forEach { profile in
+            _profileList.append(Profile(email: profile.email, password: profile.password, gender: Gender.init(rawValue: profile.gender)!))
+        }}
     }
     
     private func _checkEmail(_ email: String) {
@@ -33,7 +45,7 @@ class WelcomeViewModel: ViewModelBase {
     }
     
     private func _isEmailRegistered(_ value: String) -> Bool {
-        true
+        return _profileList.contains(where: { $0.matchesEmail(value) })
     }
     
     private func _enterValidEmailInfo(_ value: String) {

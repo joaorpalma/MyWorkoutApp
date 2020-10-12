@@ -54,6 +54,13 @@
 		9D8383032533AD62003A20B3 /* InfoDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383022533AD62003A20B3 /* InfoDialogView.swift */; };
 		9D8383072533AD95003A20B3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383062533AD95003A20B3 /* Utils.swift */; };
 		9D83830B2533B21E003A20B3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83830A2533B21E003A20B3 /* StringExtensions.swift */; };
+		9D8383102534C652003A20B3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83830F2534C652003A20B3 /* Profile.swift */; };
+		9D8383132534C821003A20B3 /* AppSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383122534C821003A20B3 /* AppSettingsService.swift */; };
+		9D8383162534C890003A20B3 /* AppSettingsServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383152534C890003A20B3 /* AppSettingsServiceImp.swift */; };
+		9D83831B2534C970003A20B3 /* profiles_db.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D83831A2534C970003A20B3 /* profiles_db.json */; };
+		9D83831F2534CAA1003A20B3 /* JsonFileManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83831E2534CAA1003A20B3 /* JsonFileManagerImp.swift */; };
+		9D8383222534CAF9003A20B3 /* JsonFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383212534CAF9003A20B3 /* JsonFileManager.swift */; };
+		9D8383282534CEE8003A20B3 /* ProfileStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383272534CEE8003A20B3 /* ProfileStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +113,13 @@
 		9D8383022533AD62003A20B3 /* InfoDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDialogView.swift; sourceTree = "<group>"; };
 		9D8383062533AD95003A20B3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		9D83830A2533B21E003A20B3 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		9D83830F2534C652003A20B3 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		9D8383122534C821003A20B3 /* AppSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsService.swift; sourceTree = "<group>"; };
+		9D8383152534C890003A20B3 /* AppSettingsServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsServiceImp.swift; sourceTree = "<group>"; };
+		9D83831A2534C970003A20B3 /* profiles_db.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profiles_db.json; sourceTree = "<group>"; };
+		9D83831E2534CAA1003A20B3 /* JsonFileManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileManagerImp.swift; sourceTree = "<group>"; };
+		9D8383212534CAF9003A20B3 /* JsonFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileManager.swift; sourceTree = "<group>"; };
+		9D8383272534CEE8003A20B3 /* ProfileStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +160,7 @@
 				9D2836D02531135B00ABBE05 /* Core */,
 				9D2836C525310FBA00ABBE05 /* Views */,
 				9D28373A2532058500ABBE05 /* CustomViews */,
+				9D8383192534C924003A20B3 /* Resources */,
 				9D2836CB2531105500ABBE05 /* Utils */,
 			);
 			path = MyWorkout;
@@ -256,6 +271,8 @@
 			children = (
 				9D8382FA2533AC94003A20B3 /* DialogService.swift */,
 				9D28370225313A6900ABBE05 /* NavigationService.swift */,
+				9D8383122534C821003A20B3 /* AppSettingsService.swift */,
+				9D8383212534CAF9003A20B3 /* JsonFileManager.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -265,6 +282,8 @@
 			children = (
 				9D8382FD2533ACA0003A20B3 /* DialogServiceImp.swift */,
 				9D28371525313C0300ABBE05 /* NavigationServiceImp.swift */,
+				9D8383152534C890003A20B3 /* AppSettingsServiceImp.swift */,
+				9D83831E2534CAA1003A20B3 /* JsonFileManagerImp.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -362,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				9D28375A25336B5A00ABBE05 /* Objects */,
+				9D8383262534CEC3003A20B3 /* DataStructures */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -369,6 +389,7 @@
 		9D28375A25336B5A00ABBE05 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				9D83830F2534C652003A20B3 /* Profile.swift */,
 				9D28375B25336B6800ABBE05 /* ProfileDetail.swift */,
 			);
 			path = Objects;
@@ -380,6 +401,22 @@
 				9D8383022533AD62003A20B3 /* InfoDialogView.swift */,
 			);
 			path = Dialog;
+			sourceTree = "<group>";
+		};
+		9D8383192534C924003A20B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9D83831A2534C970003A20B3 /* profiles_db.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9D8383262534CEC3003A20B3 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				9D8383272534CEE8003A20B3 /* ProfileStruct.swift */,
+			);
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +476,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D83831B2534C970003A20B3 /* profiles_db.json in Resources */,
 				9D2836B7252FEDF800ABBE05 /* LaunchScreen.storyboard in Resources */,
 				9D2836B4252FEDF800ABBE05 /* Assets.xcassets in Resources */,
 			);
@@ -454,8 +492,11 @@
 				9D28371F253203C200ABBE05 /* LoginViewController.swift in Sources */,
 				9D28374025320E6100ABBE05 /* MWNextView.swift in Sources */,
 				9D2836F72531387300ABBE05 /* BaseViewController.swift in Sources */,
+				9D8383132534C821003A20B3 /* AppSettingsService.swift in Sources */,
+				9D8383102534C652003A20B3 /* Profile.swift in Sources */,
 				9D28374F253272E600ABBE05 /* MWSelectView.swift in Sources */,
 				9D2836D22531136700ABBE05 /* Core.swift in Sources */,
+				9D8383222534CAF9003A20B3 /* JsonFileManager.swift in Sources */,
 				9D2836DB2531336A00ABBE05 /* DiContainer.swift in Sources */,
 				9D2836E4253133D800ABBE05 /* Command{T}.swift in Sources */,
 				9D28370325313A6900ABBE05 /* NavigationService.swift in Sources */,
@@ -482,11 +523,14 @@
 				9D2837322532046400ABBE05 /* ProfileViewModel.swift in Sources */,
 				9D28372C2532044900ABBE05 /* RegisterViewModel.swift in Sources */,
 				9D28371925313C3600ABBE05 /* ViewModelBase.swift in Sources */,
+				9D8383282534CEE8003A20B3 /* ProfileStruct.swift in Sources */,
 				9D28372F2532045900ABBE05 /* LoginViewModel.swift in Sources */,
 				9D2836C825310FF100ABBE05 /* ContainerViewController.swift in Sources */,
 				9D8382FB2533AC94003A20B3 /* DialogService.swift in Sources */,
+				9D83831F2534CAA1003A20B3 /* JsonFileManagerImp.swift in Sources */,
 				9D28371125313B3A00ABBE05 /* UILabel.swift in Sources */,
 				9D28371225313B3A00ABBE05 /* AnchoredConstraints.swift in Sources */,
+				9D8383162534C890003A20B3 /* AppSettingsServiceImp.swift in Sources */,
 				9D2836F42531382100ABBE05 /* WelcomeViewController.swift in Sources */,
 				9D28370D25313B3900ABBE05 /* UIView+Layout.swift in Sources */,
 				9D28370E25313B3900ABBE05 /* UIView+Stacking.swift in Sources */,

@@ -68,6 +68,10 @@ class WelcomeViewController: FormBaseViewController<WelcomeViewModel>, UITextFie
         self.viewModel.checkEmailCommand.execute(_emailTextField.text!)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        _emailTextField.text = ""
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         _createEmailLineGradient()
         super.viewDidAppear(animated)

@@ -23,6 +23,7 @@ class LoginViewController: FormBaseViewController<LoginViewModel> {
     
     private func _configureView() {
         _configureEmailTextField()
+        _configureBackViewButton()
 
         let formView = UIView().stack(
             _emailTextField,
@@ -41,6 +42,19 @@ class LoginViewController: FormBaseViewController<LoginViewModel> {
         _createNavigation()
     }
     
+    private func _configureEmailTextField() {
+        _emailTextField.text = self.viewModel.profileEmail
+        _emailTextField.isEnabled = false
+    }
+    
+    private func _configureBackViewButton() {
+        _backView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_navigateBack)))
+    }
+    
+    @objc private func _navigateBack() {
+        self.viewModel.navigateBackCommand.execute()
+    }
+    
     private func _createNavigation() {
         let bottomView = UIView()
         bottomView.backgroundColor = .systemBackground
@@ -57,10 +71,6 @@ class LoginViewController: FormBaseViewController<LoginViewModel> {
                           bottom: self.view.bottomAnchor, trailing: self.view.safeAreaLayoutGuide.trailingAnchor)
     }
     
-    private func _configureEmailTextField() {
-        _emailTextField.text = "joaowd@outlook.com"
-        _emailTextField.isEnabled = false
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         _createFormLineGradient()

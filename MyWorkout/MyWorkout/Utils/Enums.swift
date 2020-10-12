@@ -16,6 +16,11 @@ enum InfoDialogType {
     case info
 }
 
+enum Gender: String {
+    case Male = "Male"
+    case Female = "Female"
+}
+
 extension InfoDialogType: RawRepresentable {
     typealias RawValue = UIColor
 

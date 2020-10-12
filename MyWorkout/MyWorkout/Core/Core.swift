@@ -16,10 +16,12 @@ struct Core {
     private static func _registerServices() {
         DiContainer.registerSingleton(NavigationService.self, constructor: { NavigationServiceImp() })
         DiContainer.registerSingleton(DialogService.self, constructor: { DialogServiceImp() })
+        DiContainer.registerSingleton(JsonFileManager.self, constructor: { JsonFileManagerImp() })
+        DiContainer.registerSingleton(AppSettingsService.self, constructor: { AppSettingsServiceImp() })
     }
 
     private static func _registerViewModels() {
-        DiContainer.register(WelcomeViewModel.self, constructor: { WelcomeViewModel(dialogService: DiContainer.resolve()) })
+        DiContainer.register(WelcomeViewModel.self, constructor: { WelcomeViewModel(dialogService: DiContainer.resolve(), jsonFileManager: DiContainer.resolve()) })
         DiContainer.register(RegisterViewModel.self, constructor: { RegisterViewModel() })
         DiContainer.register(LoginViewModel.self, constructor: { LoginViewModel() })
         DiContainer.register(ProfileViewModel.self, constructor: { ProfileViewModel() })

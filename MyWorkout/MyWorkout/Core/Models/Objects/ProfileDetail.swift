@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProfileDetail {
+struct ProfileDetail {
     private let _description, _value: String
     
     init(description: String, value: String) {
