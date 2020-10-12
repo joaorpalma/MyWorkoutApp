@@ -83,15 +83,16 @@ class ProfileViewController: BaseViewController<ProfileViewModel> {
         _tableView.tableFooterView = UIView()
         _tableView.backgroundColor = .systemGroupedBackground
         _tableView.dataSource = _tableViewDataSource
-        _tableView.anchor(top: _profileBackgroundView.bottomAnchor, leading: self.view.safeAreaLayoutGuide.leadingAnchor,
-                          bottom: self.view.bottomAnchor, trailing: self.view.safeAreaLayoutGuide.trailingAnchor)
+        _tableView.anchor(top: _profileBackgroundView.bottomAnchor, leading: self.view.leadingAnchor,
+                          bottom: self.view.bottomAnchor, trailing: self.view.trailingAnchor)
         
         _tableView.reloadData()
     }
     
     private func _configurelogoutButton() {
         self.view.addSubview(_logoutButton)
-        _logoutButton.anchor(top: nil, leading: self.view.safeAreaLayoutGuide.leadingAnchor, bottom: self.view.safeAreaLayoutGuide.bottomAnchor, trailing: self.view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 0, left: 40, bottom: 40, right: 40))
+        _logoutButton.anchor(top: nil, leading: self.view.safeAreaLayoutGuide.leadingAnchor, bottom: self.view.safeAreaLayoutGuide.bottomAnchor,
+                             trailing: self.view.safeAreaLayoutGuide.trailingAnchor, padding: .init(top: 0, left: 40, bottom: 40, right: 40))
         
         _logoutButton.withHeight(50)
     }

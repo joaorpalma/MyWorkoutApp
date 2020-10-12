@@ -34,6 +34,6 @@ struct Core {
 
     private static func _startApp() {
         let navigationService: NavigationService = DiContainer.resolve()
-        navigationService.navigateAndSetAsContainer(viewModel: WelcomeViewModel.self)
+        navigationService.navigateAndSetAsContainer(viewModel: ProfileViewModel.self)
     }
 }
