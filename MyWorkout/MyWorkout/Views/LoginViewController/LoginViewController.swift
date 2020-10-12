@@ -24,7 +24,6 @@ class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDe
     private func _configureView() {
         _configureEmailTextField()
         _configurePasswordTextField()
-        _configureBackViewButton()
 
         let formView = UIView().stack(
             _emailTextField,
@@ -52,14 +51,8 @@ class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDe
         self.lowestElement = _passwordTextField
         _passwordTextField.delegate = self
         _passwordTextField.isSecureTextEntry = true
-    }
-    
-    private func _configureBackViewButton() {
-        _backView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_navigateBack)))
-    }
-    
-    @objc private func _navigateBack() {
-        viewModel.navigateBackCommand.execute()
+        _passwordTextField.returnKeyType = .go
+        _passwordTextField.textContentType = .username
     }
     
     private func _createNavigation() {
@@ -77,15 +70,20 @@ class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDe
         bottomView.anchor(top: nil, leading: self.view.safeAreaLayoutGuide.leadingAnchor,
                           bottom: self.view.bottomAnchor, trailing: self.view.safeAreaLayoutGuide.trailingAnchor)
         
-        _createNextViewTapGesture()
+        _createNavigationTapGestures()
     }
     
-    private func _createNextViewTapGesture() {
+    private func _createNavigationTapGestures() {
+        _backView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_navigateBack)))
         _nextView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_checkPassword)))
     }
     
+    @objc private func _navigateBack() {
+        viewModel.navigateBackCommand.executeIf()
+    }
+    
     @objc private func _checkPassword() {
-        viewModel.checkPasswordCommand.execute(_passwordTextField.text!)
+        viewModel.checkPasswordCommand.executeIf(_passwordTextField.text!)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

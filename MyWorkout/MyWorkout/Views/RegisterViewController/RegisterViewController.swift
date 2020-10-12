@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: FormBaseViewController<RegisterViewModel> {
+class RegisterViewController: FormBaseViewController<RegisterViewModel>, UITextFieldDelegate {
     private let _topView = MWTopView(title: "Create a new account", subtitle: "Fill out the form and sign up for free.")
     
     private let _emailTextField = MWTextField(placeholder: "")
@@ -28,6 +28,7 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel> {
     
     private func _configureView() {
         _configureEmailTextField()
+        _configurePasswordTextField()
         _configureSelectView()
         
         let selectGender = UIView().stack(
@@ -59,6 +60,20 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel> {
         _emailTextField.isEnabled = false
     }
     
+    private func _configurePasswordTextField() {
+        self.lowestElement = _passwordTextField
+        _passwordTextField.delegate = self
+        _passwordTextField.isSecureTextEntry = true
+        _passwordTextField.returnKeyType = .done
+        _passwordTextField.textContentType = .username
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        _savePassword()
+        return true
+    }
+    
     private func _configureSelectView() {
         _selectView = UIView().hstack(
             UIView(),
@@ -83,6 +98,25 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel> {
         
         bottomView.anchor(top: nil, leading: self.view.safeAreaLayoutGuide.leadingAnchor,
                           bottom: self.view.bottomAnchor, trailing: self.view.safeAreaLayoutGuide.trailingAnchor)
+        
+        _createNavigationTapGestures()
+    }
+    
+    private func _createNavigationTapGestures() {
+        _backView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_navigateBack)))
+        _nextView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(_createAccount)))
+    }
+    
+    @objc private func _navigateBack() {
+        viewModel.navigateBackCommand.executeIf()
+    }
+    
+    @objc private func _createAccount() {
+        viewModel.createAccountCommand.executeIf()
+    }
+    
+    @objc private func _savePassword() {
+        viewModel.savePasswordCommand.executeIf(_passwordTextField.text!)
     }
     
     override func viewDidAppear(_ animated: Bool) {

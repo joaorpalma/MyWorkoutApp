@@ -8,7 +8,13 @@
 import Foundation
 
 struct ProfileStruct: Codable {
-    let email: String
-    let password: String
-    let gender: String
+    var email: String
+    var password: String
+    var gender: String
+    
+    init(email: String = "", password: String = "", gender: String = "") {
+        self.email = email
+        self.password = password
+        self.gender = gender
+    }
 }
