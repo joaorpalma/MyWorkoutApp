@@ -30,7 +30,7 @@ class ProfileViewModel: ViewModelBase {
     
     
     private func _getProfilesInFileManager() {
-        let profiles: [ProfileStruct]? = _jsonFileManager.retrieveFromJsonFile(fileName: "profiles")
+        let profiles: [ProfileStruct]? = _jsonFileManager.retrieveFromJsonFile(fileName: jsonFileConstants.profiles)
         
         profiles.map { $0.forEach { profile in
             _profileList.append(Profile(email: profile.email, password: profile.password, gender: Gender.init(rawValue: profile.gender)!))

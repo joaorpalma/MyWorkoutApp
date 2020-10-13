@@ -8,49 +8,37 @@
 import UIKit
 
 class JsonFileManagerImp: JsonFileManager {
+    private let fileManager = FileManager.default
+    
     func retrieveFromJsonFile<T: Codable>(fileName: String) -> T? {
-        if let filePath = Bundle.main.path(forResource: fileName, ofType: "json") {
-            do {
-                let fileUrl = URL(fileURLWithPath: filePath)
-                let jsonData = try Data(contentsOf: fileUrl, options: .mappedIfSafe)
-                let json = try? JSONDecoder().decode(T.self, from: jsonData)
-                return json
-           } catch {
-               print(error)
-               fatalError("Unable to read contents of the file url")
-           }
-        } else {
-            return nil
+        do {
+            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let url = documentDirectory.appendingPathComponent("\(fileName).json")
+            
+            guard fileManager.fileExists(atPath: url.path) else { return nil }
+                
+            let jsonData = try Data(contentsOf: url, options: .mappedIfSafe)
+            let json = try? JSONDecoder().decode(T.self, from: jsonData)
+            return json
+        } catch {
+            print(error)
+            fatalError("Unable to read file")
         }
     }
     
     func saveToJsonFile<T>(fileName: String, data: T) where T : Decodable, T : Encodable {
-        if let filePath = Bundle.main.path(forResource: fileName, ofType: "json") {
-            do {
-                let fileUrl = URL(fileURLWithPath: filePath)
-                let encoder = JSONEncoder()
-                encoder.outputFormatting = .prettyPrinted
-                let jsonData = try encoder.encode(data)
-                try jsonData.write(to: fileUrl)
-           } catch {
-               print(error)
-               fatalError("Unable to write contents to file")
-           }
-        }
-    }
-    
-    func saveToJsonFile(fileName:String, dict:[[String:Any]]) {
-        guard let documentDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-        let fileUrl = documentDirectoryUrl.appendingPathComponent("\(fileName).json")
-
-        let personArray = dict
-
-        // Transform array into data and save it into file
         do {
-            let data = try JSONSerialization.data(withJSONObject: personArray, options: [])
-            try data.write(to: fileUrl, options: [])
+            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let url = documentDirectory.appendingPathComponent("\(fileName).json")
+            
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            let jsonData = try encoder.encode(data)
+            
+            try jsonData.write(to: url)
         } catch {
             print(error)
+            fatalError("Unable to write contents to file")
         }
     }
 }

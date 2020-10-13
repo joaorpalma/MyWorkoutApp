@@ -57,7 +57,6 @@
 		9D8383102534C652003A20B3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83830F2534C652003A20B3 /* Profile.swift */; };
 		9D8383132534C821003A20B3 /* AppSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383122534C821003A20B3 /* AppSettingsService.swift */; };
 		9D8383162534C890003A20B3 /* AppSettingsServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383152534C890003A20B3 /* AppSettingsServiceImp.swift */; };
-		9D83831B2534C970003A20B3 /* profiles.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D83831A2534C970003A20B3 /* profiles.json */; };
 		9D83831F2534CAA1003A20B3 /* JsonFileManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83831E2534CAA1003A20B3 /* JsonFileManagerImp.swift */; };
 		9D8383222534CAF9003A20B3 /* JsonFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383212534CAF9003A20B3 /* JsonFileManager.swift */; };
 		9D8383282534CEE8003A20B3 /* ProfileStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8383272534CEE8003A20B3 /* ProfileStruct.swift */; };
@@ -117,7 +116,6 @@
 		9D83830F2534C652003A20B3 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		9D8383122534C821003A20B3 /* AppSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsService.swift; sourceTree = "<group>"; };
 		9D8383152534C890003A20B3 /* AppSettingsServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsServiceImp.swift; sourceTree = "<group>"; };
-		9D83831A2534C970003A20B3 /* profiles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profiles.json; sourceTree = "<group>"; };
 		9D83831E2534CAA1003A20B3 /* JsonFileManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileManagerImp.swift; sourceTree = "<group>"; };
 		9D8383212534CAF9003A20B3 /* JsonFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileManager.swift; sourceTree = "<group>"; };
 		9D8383272534CEE8003A20B3 /* ProfileStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStruct.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				9D2836D02531135B00ABBE05 /* Core */,
 				9D2836C525310FBA00ABBE05 /* Views */,
 				9D28373A2532058500ABBE05 /* CustomViews */,
-				9D8383192534C924003A20B3 /* Resources */,
 				9D2836CB2531105500ABBE05 /* Utils */,
 			);
 			path = MyWorkout;
@@ -406,14 +403,6 @@
 			path = Dialog;
 			sourceTree = "<group>";
 		};
-		9D8383192534C924003A20B3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9D83831A2534C970003A20B3 /* profiles.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		9D8383262534CEC3003A20B3 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,7 +476,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D83831B2534C970003A20B3 /* profiles.json in Resources */,
 				9D2836B7252FEDF800ABBE05 /* LaunchScreen.storyboard in Resources */,
 				9D2836B4252FEDF800ABBE05 /* Assets.xcassets in Resources */,
 			);

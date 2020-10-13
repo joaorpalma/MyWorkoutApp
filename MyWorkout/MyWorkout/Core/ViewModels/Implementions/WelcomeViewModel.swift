@@ -13,6 +13,7 @@ class WelcomeViewModel: ViewModelBase {
     private let _appSettingsService: AppSettingsService
     
     private var _profileList: [Profile] = []
+    private let _defaultProfile = ProfileStruct(email: "registered@email.com", password: "password", gender: "Male")
     
     private(set) lazy var checkEmailCommand = WpCommand<String>(_checkEmail)
     
@@ -35,11 +36,20 @@ class WelcomeViewModel: ViewModelBase {
     }
     
     private func _getProfilesInFileManager() {
-        let profiles: [ProfileStruct]? = _jsonFileManager.retrieveFromJsonFile(fileName: "profiles")
+        let profiles: [ProfileStruct]? = _jsonFileManager.retrieveFromJsonFile(fileName: jsonFileConstants.profiles)
         
-        profiles.map { $0.forEach { profile in
-            _profileList.append(Profile(email: profile.email, password: profile.password, gender: Gender.init(rawValue: profile.gender)!))
-        }}
+        if profiles == nil {
+            _createDefaultProfile()
+        } else {
+            profiles.map { $0.forEach { profile in
+                _profileList.append(Profile(email: profile.email, password: profile.password, gender: Gender.init(rawValue: profile.gender)!))
+            }}
+        }
+    }
+    
+    private func _createDefaultProfile() {
+        _jsonFileManager.saveToJsonFile(fileName: jsonFileConstants.profiles, data: [_defaultProfile])
+        _profileList.append(Profile(email: _defaultProfile.email, password: _defaultProfile.password, gender: Gender(rawValue: _defaultProfile.gender)!))
     }
     
     private func _checkEmail(_ email: String) {

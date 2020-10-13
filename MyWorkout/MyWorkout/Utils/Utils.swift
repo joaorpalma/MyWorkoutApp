@@ -7,6 +7,10 @@
 
 import UIKit
 
+struct jsonFileConstants {
+    static var profiles = "profiles"
+}
+
 struct Utils {
     static let keyWindow: UIWindow = UIApplication.shared.windows.first {$0.isKeyWindow}!
 }
