@@ -64,7 +64,7 @@ class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDe
         _passwordTextField.delegate = self
         _passwordTextField.isSecureTextEntry = true
         _passwordTextField.returnKeyType = .go
-        _passwordTextField.textContentType = .username
+        _passwordTextField.textContentType = .oneTimeCode
     }
     
     private func _createNavigation() {

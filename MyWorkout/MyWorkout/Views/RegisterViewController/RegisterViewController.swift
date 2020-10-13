@@ -78,7 +78,7 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel>, UITextF
         _passwordTextField.delegate = self
         _passwordTextField.isSecureTextEntry = true
         _passwordTextField.returnKeyType = .done
-        _passwordTextField.textContentType = .username
+        _passwordTextField.textContentType = .oneTimeCode
     }
     
     private func _configureSelectView() {
@@ -145,6 +145,11 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel>, UITextF
         textField.endEditing(true)
         _savePassword()
         return true
+    }
+    
+    override func handleKeyboardHide() {
+        super.handleKeyboardHide()
+        _savePassword()
     }
     
     override func viewDidAppear(_ animated: Bool) {

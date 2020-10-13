@@ -52,7 +52,7 @@ class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewMod
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @objc fileprivate func handleKeyboardShow(notification: Notification) {
+    @objc public func handleKeyboardShow(notification: Notification) {
         guard !_isKeyboardVisible else { return }
         _isKeyboardVisible = true
         
@@ -75,7 +75,7 @@ class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewMod
     }
     
     
-    @objc fileprivate func handleKeyboardHide() {
+    @objc public func handleKeyboardHide() {
         _isKeyboardVisible = false
         scrollView.contentInset.bottom = 0
         scrollView.verticalScrollIndicatorInsets.bottom = 0
