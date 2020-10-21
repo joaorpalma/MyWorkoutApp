@@ -45,7 +45,9 @@ class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDe
     }
     
     private func _configureActivityIndicator() {
-        viewModel.isBusy.addObserver(self, completionHandler: {
+        viewModel.isBusy.addObserver(self, completionHandler: { [weak self] in
+            guard let self = self else { return }
+            
             if(self.viewModel.isBusy.value) {
                 self._activityIndicatorView.startAnimating()
             } else {
@@ -111,8 +113,8 @@ class LoginViewController: FormBaseViewController<LoginViewModel>, UITextFieldDe
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        coordinator.animate(alongsideTransition: nil) { _ in
-            self._createFormLineGradient()
+        coordinator.animate(alongsideTransition: nil) { [weak self] _ in
+            self?._createFormLineGradient()
         }
     }
     

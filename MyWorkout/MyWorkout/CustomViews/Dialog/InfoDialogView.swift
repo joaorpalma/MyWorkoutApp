@@ -32,14 +32,14 @@ class InfoDialogView: UIView {
         self.frame = CGRect.init(x: 0, y: 0, width: Utils.keyWindow.bounds.width, height: dialogHeight)
         Utils.keyWindow.addSubview(self)
 
-        Animations.slideVerticaly(self, showAnimation: true, completion: { _ in
-            self._hide()
+        Animations.slideVerticaly(self, showAnimation: true, completion: { [weak self] _ in
+            self?._hide()
         })
     }
 
     private func _hide() {
-        Animations.slideVerticaly(self, showAnimation: false, delay: 2.75, completion: { _ in
-            self._removeView()
+        Animations.slideVerticaly(self, showAnimation: false, delay: 2.75, completion: { [weak self] _ in
+            self?._removeView()
         })
     }
 

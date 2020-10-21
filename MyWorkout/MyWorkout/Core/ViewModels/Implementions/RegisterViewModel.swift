@@ -63,7 +63,8 @@ class RegisterViewModel: ViewModelBase {
     private func _navigateToProfile() {
         isBusy.value = true
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let self = self else { return }
             self.isBusy.value = false
             self.navigationService.navigateAndSetAsContainer(viewModel: ProfileViewModel.self)
             self._dialogService.showInfo("Account created.", informationType: .good)

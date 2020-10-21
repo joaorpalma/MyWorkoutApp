@@ -98,8 +98,8 @@ class FormBaseViewController<TViewModel: ViewModel>: BaseViewController<TViewMod
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        coordinator.animate(alongsideTransition: nil) { _ in
-            self._updateScrollViewSize()
+        coordinator.animate(alongsideTransition: nil) { [weak self] _ in
+            self?._updateScrollViewSize()
         }
     }
 
