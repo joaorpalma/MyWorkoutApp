@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AppSettingsService {
+protocol AppSettingsService where Self: AppSettingsServiceImp {
     var profileEmailSignedIn: String { get set }
 
     func clearProfileData()

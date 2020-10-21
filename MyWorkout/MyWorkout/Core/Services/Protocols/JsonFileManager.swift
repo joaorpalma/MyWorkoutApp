@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol JsonFileManager {
+protocol JsonFileManager where Self: JsonFileManagerImp {
     func retrieveFromJsonFile<T: Codable>(fileName: String) -> T?
     func saveToJsonFile<T: Codable>(fileName: String, data: T)
 }

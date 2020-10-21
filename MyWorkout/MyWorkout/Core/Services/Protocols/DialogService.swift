@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol DialogService {
+protocol DialogService where Self: DialogServiceImp {
     func showInfo(_ description: String, informationType: InfoDialogType)
 }
