@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AppSettingsServiceImp: AppSettingsService {
+final class AppSettingsServiceImp: AppSettingsService {
     private let _userDefaults = UserDefaults.standard
     
     var profileEmailSignedIn: String {
