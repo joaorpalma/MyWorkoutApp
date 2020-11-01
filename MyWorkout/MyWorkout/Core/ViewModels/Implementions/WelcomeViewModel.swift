@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WelcomeViewModel: ViewModelBase {
+final class WelcomeViewModel: ViewModelBase {
     private let _dialogService: DialogService
     private let _jsonFileManager: JsonFileManager
     private let _appSettingsService: AppSettingsService

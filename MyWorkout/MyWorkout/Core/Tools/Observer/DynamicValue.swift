@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DynamicValue<T> {
+final class DynamicValue<T> {
     private var _observers = [String: CompletionHandler]()
     var value : T { didSet { notify() } }
     

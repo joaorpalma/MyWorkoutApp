@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MWTextField: UITextField {
+final class MWTextField: UITextField {
     private let _padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     
     init(placeholder: String) {
@@ -36,16 +36,16 @@ class MWTextField: UITextField {
         self.layer.sublayers?.forEach { $0.removeFromSuperlayer()}
         self.layer.addSublayer(gradient)
     }
-
-    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: _padding)
     }
 
-    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: _padding)
     }
 
-    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: _padding)
     }
     

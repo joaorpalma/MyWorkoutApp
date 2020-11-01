@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoDialogView: UIView {
+final class InfoDialogView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.clipsToBounds = true

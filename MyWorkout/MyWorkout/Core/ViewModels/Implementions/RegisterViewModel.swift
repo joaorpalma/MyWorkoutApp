@@ -7,18 +7,16 @@
 
 import Foundation
 
-class RegisterViewModel: ViewModelBase {
+final class RegisterViewModel: ViewModelBase {
     private let _dialogService: DialogService
     private let _jsonFileManager: JsonFileManager
     private var _appSettingsService: AppSettingsService
-    
-    private(set) var profileEmail: String!
     private var profileStruct = ProfileStruct()
+    private(set) var profileEmail: String!
     
     private(set) lazy var savePasswordCommand = WpCommand(_savePassword, canExecute: _canExecute)
     private(set) lazy var saveGenderCommand = WpCommand(_saveGender, canExecute: _canExecute)
     private(set) lazy var createAccountCommand = Command(_createAccount, canExecute: _canExecute)
-    
     private(set) lazy var navigateBackCommand = Command(_navigateBack)
     
     init(jsonFileManager: JsonFileManager, dialogService: DialogService, appSettingsService: AppSettingsService) {

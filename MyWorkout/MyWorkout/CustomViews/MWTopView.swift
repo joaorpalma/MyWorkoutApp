@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MWTopView: UIView {
+final class MWTopView: UIView {
     private let _imageView = UIImageView(image: UIImage(named: "Myworkout-logo")?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: -15, right: 0)), contentMode: .scaleAspectFit)
     private let _titleLabel = UILabel(text: "", font: .systemFont(ofSize: 21, weight: .light), textColor: UIColor.label, textAlignment: .center, numberOfLines: 1)
     private let _subtitleLabel = UILabel(text: "", font: .systemFont(ofSize: 17, weight: .regular), textColor: UIColor.secondaryLabel, textAlignment: .center, numberOfLines: 1)

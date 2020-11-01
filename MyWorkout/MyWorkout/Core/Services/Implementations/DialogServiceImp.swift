@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DialogServiceImp: DialogService {
+final class DialogServiceImp: DialogService {
     func showInfo(_ description: String, informationType: InfoDialogType) {
         let infoView = InfoDialogView()
         infoView.showInfo(text: description, infoType: informationType)

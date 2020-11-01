@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MWSelectView: UIView {
+final class MWSelectView: UIView {
     private let _selectView = UIView()
     private let _titleLabel = UILabel(text: "", font: .systemFont(ofSize: 18, weight: .light), textColor: UIColor.label, textAlignment: .center, numberOfLines: 1)
     

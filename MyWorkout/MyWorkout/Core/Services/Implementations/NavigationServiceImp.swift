@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NavigationServiceImp: NavigationService {
+final class NavigationServiceImp: NavigationService {
     private var _containerViewController: ContainerViewController?
 
     func navigate<TViewModel: ViewModel>(viewModel: TViewModel.Type, arguments: Any?, animated: Bool) {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MWButton: UIButton {
+final class MWButton: UIButton {
     init(title: String, backgroundColor: UIColor) {
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JsonFileManagerImp: JsonFileManager {
+final class JsonFileManagerImp: JsonFileManager {
     private let fileManager = FileManager.default
     
     func retrieveFromJsonFile<T: Codable>(fileName: String) -> T? {

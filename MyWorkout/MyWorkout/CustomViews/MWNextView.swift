@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MWNextView: UIView {
+final class MWNextView: UIView {
     private let _imageView = UIImageView(image: UIImage(named: "Next-icon"))
     private let _titleLabel = UILabel(text: "", font: .systemFont(ofSize: 20, weight: .light), textColor: UIColor.Theme.blue, textAlignment: .center, numberOfLines: 1)
     

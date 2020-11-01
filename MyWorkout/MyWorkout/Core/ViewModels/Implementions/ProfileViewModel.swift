@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProfileViewModel: ViewModelBase {
+final class ProfileViewModel: ViewModelBase {
     private let _jsonFileManager: JsonFileManager
     private let _appSettingsService: AppSettingsService
     private let _dialogService: DialogService

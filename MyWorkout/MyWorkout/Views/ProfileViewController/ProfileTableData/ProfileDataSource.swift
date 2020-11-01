@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileDataSource: NSObject, UITableViewDataSource {
+final class ProfileDataSource: NSObject, UITableViewDataSource {
     private let _profileDetails: [ProfileDetail]
     
     init(profileDetails: [ProfileDetail]) {

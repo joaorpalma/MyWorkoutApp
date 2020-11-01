@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MWBackView: UIView {
+final class MWBackView: UIView {
     private let _imageView = UIImageView(image: UIImage(named: "Back-icon"))
     private let _titleLabel = UILabel(text: "", font: .systemFont(ofSize: 20, weight: .light), textColor: UIColor.secondaryLabel, textAlignment: .center, numberOfLines: 1)
     
