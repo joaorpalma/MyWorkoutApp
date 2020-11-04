@@ -59,13 +59,11 @@ class RegisterViewController: FormBaseViewController<RegisterViewModel>, UITextF
     }
     
     private func _configureActivityIndicator() {
-        viewModel.isBusy.addObserver(self, completionHandler: { [weak self] in
-            guard let self = self else { return }
-            
-            if(self.viewModel.isBusy.value) {
-                self._activityIndicatorView.startAnimating()
+        viewModel.isBusy.addObserver(self, completionHandler: weakify { strongSelf in
+            if(strongSelf.viewModel.isBusy.value) {
+                strongSelf._activityIndicatorView.startAnimating()
             } else {
-                self._activityIndicatorView.stopAnimating()
+                strongSelf._activityIndicatorView.stopAnimating()
             }
         })
     }
